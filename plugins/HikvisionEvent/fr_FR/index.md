@@ -26,11 +26,8 @@ La configuration des équipements Hikvision est accessible à partir du menu
 plugins puis Sécurité. Vous retrouvez ici :
 
 -   un bouton pour créer un équipement manuellement
-
 -   un bouton pour afficher la configuration du plugin
-
 -   un bouton qui vous donne une vue d'ensemble de tous vos équipements à un moment donné (Fonction à venir)
-
 -   enfin en dessous vous retrouvez la liste de vos équipements Hikvision
 
 En cliquant sur un de vos équipements vous arrivez sur la page
