@@ -12,7 +12,7 @@ Si rien n'est indiqué, il s'agit probablement d'une petite mise à jour pour la
 
 # 11/02/2022
 
-- Modification des docs associées au projet
+- Modification des docs associés au projet
 
 # 10/02/2022
 
