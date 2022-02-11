@@ -10,7 +10,14 @@ Ce plugin permet de récupérer les alarmes et exécuter quelques actions sur vo
 Configuration du plugin 
 =======================
 
-Après installation du plugin, il vous suffit de l’activer. Il n'y a aucune configuration particulière à faire
+Après installation du plugin, il vous suffit de l’activer. Il n'y a aucune configuration particulière à faire.
+Il est nécessaire de ne pas toucher aux paramètres du démon.
+Quelques options sont configurables :
+- **Durée de rétention des images** pour la durée ou le plugin conserve les images enregistrées dans le répertoire data du plugin.
+- **Pièce par défaut**
+- **Ignorer le heartbeat** 
+
+Il sera possible dans une version ultérieure de détecter les périphériques Hikvision sur votre réseau local
 
 Configuration des équipements 
 =============================
