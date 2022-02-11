@@ -83,7 +83,7 @@ Il est nécessaire d'activer chaque évènement désiré et d'activer pour chaqu
 ![event-ok](https://user-images.githubusercontent.com/60837526/153620262-998acf82-b909-43b9-a281-8d7889c0554c.jpg)
 
 **Paramètrage des caméras ou caméras ou NVR Hikvision**
-================================
+=====================================================
 
 Système - Config système
 -----------------------
