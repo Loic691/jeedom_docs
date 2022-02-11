@@ -60,7 +60,7 @@ commandes.
 -	**Mot de passe** : Mot de passe de l'équipement Hikvision.
 
 Il n'est pas nécessaire d'activé dans le réseau avancé l'option **Hikvision-CGI athentification** ni **ONVIF** sauf si vous utilisez ces fonctionnalités par ailleurs.
-> NB : Lors de l'enregistrement de l'équipement. Si une connexion en cours est déjà effective sur l'équipement, la connexion est **tuée** puis **relancé**.
+> NB : Lors de l'enregistrement de l'équipement. Si une connexion en cours est déjà effective sur l'équipement, la connexion est **tuée** puis **relancée**.
 
 **Commandes Equipement Hikvision**
 ================================
