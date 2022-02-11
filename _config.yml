@@ -19,9 +19,9 @@ exclude:
 plugins:
 - jekyll-paginate
 - jekyll-seo-tag
-title: "Documentations des plugins Nebz"
-description: "Ceci est la documentation des plugins créés par Nebz de la solution domotique Jeedom."
-author: "Nebz"
+title: "Documentations des plugins Loic69"
+description: "Ceci est la documentation des plugins créés par Loic69 de la solution domotique Jeedom."
+author: "Loic69"
 image: https://doc.jeedom.com/images/logo.png
 twitter:
   username: Jeedom_domotic
