@@ -102,7 +102,8 @@ Basculer de l'authentification DIGEST en DIGEST/BASIC le RTSP (vous servira pour
 
 Système - Gestion des utilisateurs
 -----------------------
-Créer un utilisateur dédié au plugin
+Créer un utilisateur dédié au plugin. La capture représente le minimum requis pour le plugin. Si vous souhaitez pouvoir visualiser la caméra dans le plugin caméra natif jeedom, il est nécessaire de rajouter les droits audio et vidéo en lecture.
+
 ![systemusers-ok](https://user-images.githubusercontent.com/60837526/153629554-f0580c4d-8169-4b90-b28d-21d46745b5bf.JPG)
 
 Network - Avancé
