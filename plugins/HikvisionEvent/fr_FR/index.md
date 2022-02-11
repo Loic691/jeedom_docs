@@ -7,6 +7,10 @@ description: Documentation du plugin Hikvision Event
 
 Ce plugin permet de récupérer les alarmes et exécuter quelques actions sur vos équipements Hikvision (et sous-marques).
 Pour la beta, le plugin ne gère que la remontée d'alarme. Les commandes actions arriveront dans de futures versions.
+Sont supportés à date :
+- La plupart des **caméras** Hikvision (si certaines ne fonctionnent pas, écrivez moi sur la community)
+- La plupart des **NVR** (non testés)
+- Les **portiers doorbell** ne sont pour l'instant pas supportés (des tests sont en cours)
 
 
 Configuration du plugin 
