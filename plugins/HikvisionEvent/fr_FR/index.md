@@ -64,6 +64,9 @@ Autant de commandes info sont créées que de
 - **Region** : Générallement 4 possibles pour la plupart des évènements intelligents  
 - **Target** : La cible détectée human ou vehicule
 
+Par exemple : cette commande info est créée : **Chan 1 regionEntrance Region 1 human**
+Libre à vous de la renommer le cas échéant.
+
 > NB : Les évènements intelligentes sont plus robustes et plus fiables que les évènements simple. Par exemple la détection intrusion intelligente (fielddetection) par rapport à la détection de mouvement simple (VMD)
 
 
