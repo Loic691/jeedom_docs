@@ -105,6 +105,13 @@ Système - Gestion des utilisateurs
 Créer un utilisateur dédié au plugin
 ![systemusers-ok](https://user-images.githubusercontent.com/60837526/153629554-f0580c4d-8169-4b90-b28d-21d46745b5bf.JPG)
 
+Network - Avancé
+-----------------------
+Cette partie ne concerne pas directement ce plugin et n'est donc pas nécessaire.
+En revanche elle est nécessaire si vous souhaitez intégrer la caméra dans le plugin caméra jeedom natif
+
+![networkadvanced-ok](https://user-images.githubusercontent.com/60837526/153638744-d15962ed-45c4-4f75-8edd-1a1fe2d43c7e.JPG)
+
 
 **Paramètrage des portiers doorbell Hikvision**
 ==============================================
