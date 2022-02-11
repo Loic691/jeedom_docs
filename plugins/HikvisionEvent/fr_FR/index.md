@@ -5,7 +5,7 @@ title: Plugin Hikvision Event
 description: Documentation du plugin Hikvision Event
 ---
 
-Ce plugin permet de récupérer les alarmes et exécuter quelques actions sur vos équipements Hikvision (et sous marques).
+Ce plugin permet de récupérer les alarmes et exécuter quelques actions sur vos équipements Hikvision (et sous-marques).
 
 Configuration du plugin 
 =======================
@@ -31,43 +31,34 @@ configuration de votre équipement comprenant 2 onglets, équipement et
 commandes.
 
 -   **Onglet Equipement** :
-
 -   **Nom de l’équipement** : nom de votre équipement
-
 -   **Activer** : permet de rendre votre équipement actif
-
 -   **Visible** : le rend visible sur le dashboard
-
 -   **Objet parent** : indique l’objet parent auquel appartient l’équipement
-
--   **Protocole ** : Protocole (HTTPS recommandé) à utiliser pour la connexion à équipement Hikvision.
-   
--   **IP ** : l'IP de l'équipement Hikvision.
-   
--   **Port ** : Le port de l'équipement Hikvision (Généralement 80 pour HTTP et 443 pour HTTPS).
+-   **Protocole** : Protocole (HTTPS recommandé) à utiliser pour la connexion à équipement Hikvision.
+-   **IP** : l'IP de l'équipement Hikvision (doit être fixe sur votre réseau local)
+-   **Port** : Le port de l'équipement Hikvision (Généralement 80 pour HTTP et 443 pour HTTPS).
 
 > Si vous avez modifié le port par défaut (80 ou 443) vous pouvez le modifier
 
 -   **Utilisateur** : Utilisateur de l'équipement Hikvision (Un utilisateur spécifique à l'API ISAPI est nécessaire avec les droits suffisants).
-
 -	**Mot de passe** : Mot de passe de l'équipement Hikvision.
 
--	**Auto-Actualisation (cron)** : delais pour vérifier les données sur AdGuard Home, 5min par défaut.
-
-Une fois AdGuard Home ajouté et sauvegarde de l'équipement, les clients trouvés dans AdGuard Home sont ajoutés en tant qu'équipements séparés.
-
-Si vous **ajoutez un client** par la suite, il sera ajouté **automatiquement de la nuit**, pour forcer son ajout dans jeedom, **re-sauvegardez l'équipement AdGuard Home**.
-
-Si vous **retirez un client** par la suite, il sera désactivé **automatiquement de la nuit**, pour forcer sa désactivation dans jeedom, **re-sauvegardez l'équipement AdGuard Home**.
-
-> NB : Un équipement de type **Client**, doit être **désactivé pour être supprimable**.
+> NB : Lors de l'enregistrement de l'équipement. Si une connexion en cours est déjà effective sur l'équipement, la connexion est **tuée** puis **relancé**.
 
 **Commandes Equipement Hikvision**
 ================================
-- **Rafraichir** : Permet de rafraichir manuellement l'équipement en plus de l'auto-actualisation
-- **Online** : Binaire indiquant si AdGuard répond correctement aux demandes
-- **Update AdGuard Dispo** : Binaire indiquant si une mise à jour est disponnible
-- **Update AdGuard** : Action permettant de mettre à jour AdGuard (si une mise à jour est disponible)
+Les commandes d'alarmes sont automatiquement créées au fil de leur arrivée.
+A moins de savoir précisément ce que vous souhaitez utiliser comme alarme et si vous souhaitez dans un premier temps toutes les obtenir, il est conseillé de toutes les activer sur votre équipement Hikvision. Cela créera les commandes, faites votre marché, puis désactiver sur la caméra celles que vous ne souhaitez pas utiliser.
+
+Autant de commandes info sont créées que de 
+- **Canaux** : 1 pour les caméras, plusieurs pour les NVR
+- **Type d'alarme** : fielddetection, linedetection, regionEntrance, unattendedBaggage, audioexception, facedetection, attendedBaggage, diskError, faceCapture, scenechangedetection, VMD, ...
+- **Region** : Générallement 4 possibles pour la plupart des évènements intelligents  
+- **Target** : La cible détectée human ou vehicule
+
+> NB : Les évènements intelligentes sont plus robustes et plus fiables que les évènements simple. Par exemple la détection intrusion intelligente (fielddetection) par rapport à la détection de mouvement simple (VMD)
+
 
 Protection Globale
 -----------------------
@@ -99,161 +90,4 @@ Sécurité de navigation Globale
 
 ![image](https://user-images.githubusercontent.com/28622481/133207227-8f9aa942-54c6-4048-8fa1-3711f4ca082c.png)
 
-Contrôle Parental Global
------------------------
-- **Statut Contrôle Parental Global** : Binaire indiquant l'état du Contrôle Parental Global
-- **Activer le Contrôle Parental Global** : Action permettant d'activer le Contrôle Parental Global
-- **Désactiver le Contrôle Parental Global** : Action permettant de désactiver le Contrôle Parental Global
 
-**Correspondance AdGuard** (Paramètres > Paramètres généraux > Utiliser le contrôle parental d'AdGuard) :
-
-![image](https://user-images.githubusercontent.com/28622481/133207419-bac0d204-c4fc-414d-b411-c7ec072ab514.png)
-
-Recherche Sécurisée Globale
------------------------
-- **Statut Recherche Sécurisée Globale** : Binaire indiquant l'état de la Recherche Sécurisée Globale
-- **Activer la Recherche Sécurisée Globale** : Action permettant d'activer la Recherche Sécurisée Globale
-- **Désactiver la Recherche Sécurisée Globale** : Action permettant de désactiver la Recherche Sécurisée Globale
-
-**Correspondance AdGuard** (Paramètres > Paramètres généraux > Renforcer la recherche sécurisée) :
-
-![image](https://user-images.githubusercontent.com/28622481/133207585-41110514-75f3-4a13-8f73-f3aca3c93820.png)
-
-Services Globaux
------------------------
-- **Services Bloqués** : Chaine indiquant les services bloqués globalement
-- **Bloquer un service** : Action permettant de bloquer un service de la liste
-- **Débloquer un service** : Action permettant de débloquer un service de la liste
-- **Bloquer tous les services** : Action permettant de bloquer tous les services de la liste
-- **Débloquer tous les services** : Action permettant de débloquer tous les services de la liste
-
-**Correspondance AdGuard** (Filtres > Services bloqués) : 
-
-![image](https://user-images.githubusercontent.com/28622481/133207917-e813a4d1-42d2-491c-982a-ebabf6510383.png)
-
-Internet Bloqué via DNS
------------------------
-- **Statut Internet Bloqué via DNS** : Binaire indiquant si on a bloqué internet via le DNS
-- **Bloquer tout internet via DNS** : Action permettant de bloquer internet via le DNS
-- **Débloquer tout internet via DNS** : Action permettant de débloquer internet via le DNS
-
-**Correspondance AdGuard** (Filtres > Règles de filtrage personnalisées > ajout de la règle : `||*^$important` en premier) : 
-
-![image](https://user-images.githubusercontent.com/28622481/133210452-4ebbc8b0-836d-43a4-9db9-e01c2534679e.png)
-
-Règle filtrage personnalisée
------------------------
-- **Ajouter une règle filtrage personnalisée** : Champ permettant d'ajouter une règle de filtrage personnalisée en premier (orthographe parfaite, sans guillemets autour)
-- **Retirer une règle filtrage personnalisée** : Champ permettant de retirer une règle de filtrage personnalisée (orthographe parfaite, sans guillemets autour)
-
-Voir [ici](https://github.com/AdguardTeam/AdGuardHome/wiki/Hosts-Blocklists){:target="_blank" rel="noopener"}
-
-**Correspondance AdGuard** (Filtres > Règles de filtrage personnalisées > ajout de la règle donnée en premier)
-
-Statistiques
------------------------
-- **Réinitialiser Statistiques** : Permet de remettre à zéro les statistiques
-- **Requêtes DNS** : indique le nombre de requêtes DNS traitées au cours des 24 dernières heures
-- **Bloqués par Filtres** : indique le nombre de requêtes DNS bloquées par les filtres adblock et les listes de blocage des hôtes
-- **Tentatives de malware-hameçonnage bloquées** : indique le nombre de requêtes DNS bloquées par le module Sécurité de navigation d'AdGuard
-- **Recherches sécurisées forcées** : indique le nombre de requêtes DNS faites avec la Recherche securisée
-- **Sites à contenu adulte bloqués** : indique le nombre de sites à contenu adulte bloqués
-- **Temps moyen de traitement** : indique le temps moyen (en millisecondes) de traitement d'une requête DNS
-
-**Correspondance AdGuard** (Paramètres > Paramètres généraux > Configuration des statistiques > bouton Effacer les statistiques) :
-
-![image](https://user-images.githubusercontent.com/28622481/133211167-470e9959-bda7-4810-a02d-8d26363bb981.png)
-
-**et** (Tableau de bord > Statistiques générales) :
-
-![image](https://user-images.githubusercontent.com/28622481/133211276-6c24d23c-6647-4b5f-a26c-e5834bd1a657.png)
-
-**Commandes Equipement Client**
-================================
-
-Utiliser les Paramètres Généraux
---------------------------------
-- **Statut Utiliser les Paramètres Généraux** : Binaire indiquant si on a activé Utiliser les Paramètres Généraux
-- **Activer Utiliser les Paramètres Généraux** : Action permettant d'activer Utiliser les Paramètres Généraux
-- **Désactiver Utiliser les Paramètres Généraux** : Action permettant de désactiver Utiliser les Paramètres Généraux
-
-**Correspondance AdGuard** (Paramètres > Paramètres du client > Modifier Client > Paramètres > Utiliser les paramètres généraux (1)) :
-
-![image](https://user-images.githubusercontent.com/28622481/133217292-24f23ed8-8de2-492f-bd83-e9b90715de17.png)
-
-Filtrage
---------------------------------
-- **Statut Filtrage** : Binaire indiquant l'état du filtrage
-- **Activer le Filtrage** : Action permettant d'activer le filtrage
-- **Désactiver le Filtrage** : Action permettant de désactiver le filtrage
-
-**Correspondance AdGuard** (Paramètres > Paramètres du client > Modifier Client > Paramètres > Bloquer les domaines à l'aide des filtres et fichiers hosts (2))
-
-Sécurité de navigation
------------------------
-- **Statut Sécurité de navigation** : Binaire indiquant l'état de la Sécurité de navigation
-- **Activer la Sécurité de navigation** : Action permettant d'activer la Sécurité de navigation
-- **Désactiver la Sécurité de navigation** : Action permettant de désactiver la Sécurité de navigation
-
-**Correspondance AdGuard** (Paramètres > Paramètres du client > Modifier Client > Paramètres > Utiliser le service Sécurité de navigation d'AdGuard (3))
-
-Contrôle Parental
------------------------
-- **Statut Contrôle Parental** : Binaire indiquant l'état de le Contrôle Parental
-- **Activer le Contrôle Parental** : Action permettant d'activer le Contrôle Parental
-- **Désactiver le Contrôle Parental** : Action permettant de désactiver le Contrôle Parental
-
-**Correspondance AdGuard** (Paramètres > Paramètres du client > Modifier Client > Paramètres > Utiliser le contrôle parental d'AdGuard (4))
-
-Recherche Sécurisée
------------------------
-- **Statut Recherche Sécurisée** : Binaire indiquant l'état de la Recherche Sécurisée
-- **Activer la Recherche Sécurisée** : Action permettant d'activer la Recherche Sécurisée
-- **Désactiver la Recherche Sécurisée** : Action permettant de désactiver la Recherche Sécurisée
-
-**Correspondance AdGuard** (Paramètres > Paramètres du client > Modifier Client > Paramètres > Renforcer la recherche sécurisée (5))
-
-Utiliser les services bloqués globlaux
---------------------------------
-- **Statut Utiliser les services bloqués globlaux** : Binaire indiquant si on a activé Utiliser les services bloqués globlaux
-- **Activer Utiliser les services bloqués globlaux** : Action permettant d'activer Utiliser les services bloqués globlaux
-- **Désactiver Utiliser les services bloqués globlaux** : Action permettant de désactiver Utiliser les services bloqués globlaux
-
-**Correspondance AdGuard** (Paramètres > Paramètres du client > Modifier Client > Bloquer des services spécifiques > Utiliser les services bloqués globaux (1)):
-
-![image](https://user-images.githubusercontent.com/28622481/133218452-cf994ad7-bf63-4dbd-b727-ff64339b7b31.png)
-
-Services spécifiques
------------------------
-- **Services Bloqués** : Chaine indiquant les services bloqués spécifiquement pour ce client
-- **Bloquer un service** : Action permettant de bloquer un service de la liste spécifiquement pour ce client
-- **Débloquer un service** : Action permettant de débloquer un service de la liste spécifiquement pour ce client
-
-**Correspondance AdGuard** (Paramètres > Paramètres du client > Modifier Client > Bloquer des services spécifiques > les services (2))
-
-- **Bloquer tous les services** : Action permettant de bloquer tous les services de la liste spécifiquement pour ce client
-- **Débloquer tous les services** : Action permettant de débloquer tous les services de la liste spécifiquement pour ce client
-
-**Correspondance AdGuard** (Paramètres > Paramètres du client > Modifier Client > Bloquer des services spécifiques > Tout bloquer/Tout débloquer (3))
-
-Internet Bloqué via DNS
------------------------
-- **Statut Internet Bloqué via DNS** : Binaire indiquant si on a bloqué internet via le DNS pour ce client
-- **Bloquer tout internet via DNS** : Action permettant de bloquer internet via le DNS pour ce client
-- **Débloquer tout internet via DNS** : Action permettant de débloquer internet via le DNS pour ce client
-
-**Correspondance AdGuard** (Filtres > Règles de filtrage personnalisées > ajout de la règle : `||*^$client='NomClient',important` en premier)
-
-![image](https://user-images.githubusercontent.com/28622481/133222436-9e17578a-93e2-4be2-a96c-957131d5686a.png)
-
-Identifiants
------------------------
-- **Identifiant(s)** : Chaine contenant les identifiants actuels du client
-- **Ajouter un identifiant** : Action permettant d'ajouter un identifiant au client (sans guillemets autour !!)
-- **Retirer un identifiant** : Action permettant de retirer un identifiant au client (sans guillemets autour !!)
-
-> **Attention, s'il existe sur un autre client, il faut d'abord le retirer de ce client ! AdGuard n'autorise pas deux clients a partager les mêmes identifiants (logique ;))**
-
-**Correspondance AdGuard** (Paramètres > Paramètres du client > Modifier Client > Identifiant) :
-
-![image](https://user-images.githubusercontent.com/28622481/133277119-3de65a3b-2868-4db1-b136-ca9c498270d3.png)
