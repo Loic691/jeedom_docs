@@ -22,7 +22,7 @@ Quelques options sont configurables :
 - **Port du démon** qui sert à la communication entre le plugin et le démon (Il est recommandé de ne pas le modifier)
 - **Durée de rétention des images** pour la durée ou le plugin conserve les images enregistrées dans le répertoire data du plugin.
 - **Pièce par défaut**
-- **Ignorer le heartbeat** 
+- **Ignorer le heartbeat** (evenement videoloss inactive de hikvision)
 
 Il sera possible dans une version ultérieure de détecter les périphériques Hikvision sur votre réseau local.
 
@@ -73,8 +73,13 @@ Autant de commandes info sont créées que de
 Par exemple, cette commande info binaire est créée : **Chan 1 regionEntrance Region 1 human**
 Libre à vous de la renommer le cas échéant.
 
-> NB : Les évènements intelligentes sont plus robustes et plus fiables que les évènements simple. Par exemple la détection intrusion intelligente (fielddetection) par rapport à la détection de mouvement simple (VMD)
+> NB : Les évènements intelligentes sont plus robustes et plus fiables que les évènements simple. Par exemple la détection intrusion intelligente (fielddetection) par rapport à la détection de mouvement simple (VMD).
 
+Il est nécessaire d'activer chaque évènement désiré et d'activer pour chaque la fonction **Avertir le centre de surveillance** tel indiqué sur la capture ci-dessous.
+![event](https://user-images.githubusercontent.com/60837526/153619174-5be660ec-9def-426d-9249-ff0ba6389d57.jpg)
+
+**Paramètrage des caméras ou caméras ou NVR Hikvision **
+================================
 
 Protection Globale
 -----------------------
@@ -84,9 +89,7 @@ Protection Globale
 
 **Correspondance AdGuard** :
 
-![image](https://user-images.githubusercontent.com/28622481/133206289-810d7a4d-9705-4923-9831-e8e78100f05b.png)
 
-![alarmes](https://user-images.githubusercontent.com/60837526/153617208-0fd7a6cf-7ec2-4365-9a4e-91a624f9cbaa.jpg)
 
 
 Filtrage Global
@@ -108,5 +111,12 @@ Sécurité de navigation Globale
 **Correspondance AdGuard** (Paramètres > Paramètres généraux > Utiliser le service Sécurité de navigation d'AdGuard) :
 
 ![image](https://user-images.githubusercontent.com/28622481/133207227-8f9aa942-54c6-4048-8fa1-3711f4ca082c.png)
+
+
+**Paramètrage des portiers doorbell Hikvision **
+================================
+A venir suivant compatibilité.
+authentification DIGEST obligatoire sur certains modèles.
+flux alertStream vide et non bloquant
 
 
