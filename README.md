@@ -1,4 +1,4 @@
-# Documentation Plugins Nebz
+# Documentation Plugins Loic69
 
 [aTVremote](https://nebzhb.github.io/jeedom_docs/plugins/aTVremote/fr_FR/)
 
