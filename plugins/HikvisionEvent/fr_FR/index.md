@@ -54,9 +54,12 @@ commandes.
 
 > Si vous avez modifié le port par défaut (80 ou 443) vous pouvez le modifier
 
+![network-ok](https://user-images.githubusercontent.com/60837526/153629872-6fe42bc2-6bce-4afb-ac7f-840899a85f14.JPG)
+
 -   **Utilisateur** : Utilisateur de l'équipement Hikvision (Un utilisateur spécifique à l'API ISAPI est nécessaire avec les droits suffisants).
 -	**Mot de passe** : Mot de passe de l'équipement Hikvision.
 
+Il n'est pas nécessaire d'activé dans le réseau avancé l'option **Hikvision-CGI athentification** ni **ONVIF** sauf si vous utilisez ces fonctionnalités par ailleurs.
 > NB : Lors de l'enregistrement de l'équipement. Si une connexion en cours est déjà effective sur l'équipement, la connexion est **tuée** puis **relancé**.
 
 **Commandes Equipement Hikvision**
@@ -76,41 +79,31 @@ Libre à vous de la renommer le cas échéant.
 > NB : Les évènements intelligentes sont plus robustes et plus fiables que les évènements simple. Par exemple la détection intrusion intelligente (fielddetection) par rapport à la détection de mouvement simple (VMD).
 
 Il est nécessaire d'activer chaque évènement désiré et d'activer pour chaque la fonction **Avertir le centre de surveillance** tel indiqué sur la capture ci-dessous.
-![event](https://user-images.githubusercontent.com/60837526/153619174-5be660ec-9def-426d-9249-ff0ba6389d57.jpg)
 
-**Paramètrage des caméras ou caméras ou NVR Hikvision **
+![event-ok](https://user-images.githubusercontent.com/60837526/153620262-998acf82-b909-43b9-a281-8d7889c0554c.jpg)
+
+**Paramètrage des caméras ou caméras ou NVR Hikvision**
 ================================
 
-Protection Globale
+Système - Config système
 -----------------------
+
+![systemvca](https://user-images.githubusercontent.com/60837526/153620665-1a235508-fef7-402a-830f-5885f31251da.JPG)
+
 - **Statut protection** : Binaire indiquant l'état de la protection globale
 - **Activer la protection** : Action permettant d'activer la protection globale
 - **Désactiver la protection** : Action permettant de désactiver la protection globale
 
-**Correspondance AdGuard** :
-
-
-
-
-Filtrage Global
+Système - Sécurité
 -----------------------
-- **Statut Filtrage Global** : Binaire indiquant l'état du filtrage global
-- **Activer le Filtrage Global** : Action permettant d'activer le filtrage global
-- **Désactiver le Filtrage Global** : Action permettant de désactiver le filtrage global
+Basculer de l'authentification DIGEST en DIGEST/BASIC le RTSP (vous servira pour le plugin camera jeedom ou autre NVR) et Authentification WEB (nécessaire pour ce présent plugin)
 
-**Correspondance AdGuard** (Paramètres > Paramètres généraux > Bloquer les domaines à l'aide des filtres et fichiers hosts) :
+![Systemauth](https://user-images.githubusercontent.com/60837526/153620948-7e186621-75ad-48b8-9817-31c77bfc9a57.JPG)
 
-![image](https://user-images.githubusercontent.com/28622481/133206778-015af02d-8039-4c78-9732-e048c41cfa21.png)
-
-Sécurité de navigation Globale
+Système - Gestion des utilisateurs
 -----------------------
-- **Statut Sécurité de navigation Globale** : Binaire indiquant l'état de la Sécurité de navigation Globale
-- **Activer la Sécurité de navigation Globale** : Action permettant d'activer la Sécurité de navigation Globale
-- **Désactiver la Sécurité de navigation Globale** : Action permettant de désactiver la Sécurité de navigation Globale
-
-**Correspondance AdGuard** (Paramètres > Paramètres généraux > Utiliser le service Sécurité de navigation d'AdGuard) :
-
-![image](https://user-images.githubusercontent.com/28622481/133207227-8f9aa942-54c6-4048-8fa1-3711f4ca082c.png)
+Créer un utilisateur dédié au plugin
+![systemusers-ok](https://user-images.githubusercontent.com/60837526/153629554-f0580c4d-8169-4b90-b28d-21d46745b5bf.JPG)
 
 
 **Paramètrage des portiers doorbell Hikvision **
