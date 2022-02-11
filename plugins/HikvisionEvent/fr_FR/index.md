@@ -86,6 +86,9 @@ Protection Globale
 
 ![image](https://user-images.githubusercontent.com/28622481/133206289-810d7a4d-9705-4923-9831-e8e78100f05b.png)
 
+![alarmes](https://user-images.githubusercontent.com/60837526/153617208-0fd7a6cf-7ec2-4365-9a4e-91a624f9cbaa.jpg)
+
+
 Filtrage Global
 -----------------------
 - **Statut Filtrage Global** : Binaire indiquant l'état du filtrage global
