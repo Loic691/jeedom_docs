@@ -11,13 +11,16 @@ Configuration du plugin
 =======================
 
 Après installation du plugin, il vous suffit de l’activer. Il n'y a aucune configuration particulière à faire.
-Il est nécessaire de ne pas toucher aux paramètres du démon.
+Il est nécessaire de ne pas toucher aux paramètres du démon. Seul le port peut être modifié sur le port par défaut est déjà utilisé sur votre machine jeedom
 Quelques options sont configurables :
+- **Port du démon** qui sert à la communication entre le plugin et le démon (Il est recommandé de ne pas le modifier)
 - **Durée de rétention des images** pour la durée ou le plugin conserve les images enregistrées dans le répertoire data du plugin.
 - **Pièce par défaut**
 - **Ignorer le heartbeat** 
 
-Il sera possible dans une version ultérieure de détecter les périphériques Hikvision sur votre réseau local
+Il sera possible dans une version ultérieure de détecter les périphériques Hikvision sur votre réseau local.
+
+Il est également possible de réparer NodeJS le cas échéant.
 
 Configuration des équipements 
 =============================
