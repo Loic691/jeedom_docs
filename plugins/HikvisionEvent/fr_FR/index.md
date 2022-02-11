@@ -1,11 +1,11 @@
 ---
 layout: default
 lang: fr_FR
-title: Plugin AdGuard Home
-description: Documentation du plugin AdGuard Home
+title: Plugin Hikvision Event
+description: Documentation du plugin Hikvision Event
 ---
 
-Ce plugin permet de monitorer et exécuter quelques actions sur vos AdGuard Home.
+Ce plugin permet de récupérer les alarmes et exécuter quelques actions sur vos équipements Hikvision (et sous marques).
 
 Configuration du plugin 
 =======================
@@ -15,16 +15,16 @@ Après installation du plugin, il vous suffit de l’activer. Il n'y a aucune co
 Configuration des équipements 
 =============================
 
-La configuration des équipements AdGuard est accessible à partir du menu
-plugins puis Monitoring. Vous retrouvez ici :
+La configuration des équipements Hikvision est accessible à partir du menu
+plugins puis Sécurité. Vous retrouvez ici :
 
 -   un bouton pour créer un équipement manuellement
 
 -   un bouton pour afficher la configuration du plugin
 
--   un bouton qui vous donne une vue d'ensemble de tous vos équipements à un moment donné
+-   un bouton qui vous donne une vue d'ensemble de tous vos équipements à un moment donné (Fonction à venir)
 
--   enfin en dessous vous retrouvez la liste de vos équipements AdGuard Home et des clients liés
+-   enfin en dessous vous retrouvez la liste de vos équipements Hikvision
 
 En cliquant sur un de vos équipements vous arrivez sur la page
 configuration de votre équipement comprenant 2 onglets, équipement et
@@ -40,15 +40,17 @@ commandes.
 
 -   **Objet parent** : indique l’objet parent auquel appartient l’équipement
 
-**Pour AdGuard uniquement**
+-   **Protocole ** : Protocole (HTTPS recommandé) à utiliser pour la connexion à équipement Hikvision.
+   
+-   **IP ** : l'IP de l'équipement Hikvision.
+   
+-   **Port ** : Le port de l'équipement Hikvision (Généralement 80 pour HTTP et 443 pour HTTPS).
 
--   **Ip du serveur** : l'ip du serveur AdGuard Home.
+> Si vous avez modifié le port par défaut (80 ou 443) vous pouvez le modifier
 
-> Si vous avez modifié le port par défaut (80) vous pouvez ajouter votre port ici sous la forme ip:port
+-   **Utilisateur** : Utilisateur de l'équipement Hikvision (Un utilisateur spécifique à l'API ISAPI est nécessaire avec les droits suffisants).
 
--   **Utilisateur** : Utilisateur AdGuard Home.
-
--	**Mot de passe** : Mot de passe de l'utilisateur AdGuard Home.
+-	**Mot de passe** : Mot de passe de l'équipement Hikvision.
 
 -	**Auto-Actualisation (cron)** : delais pour vérifier les données sur AdGuard Home, 5min par défaut.
 
@@ -60,7 +62,7 @@ Si vous **retirez un client** par la suite, il sera désactivé **automatiquemen
 
 > NB : Un équipement de type **Client**, doit être **désactivé pour être supprimable**.
 
-**Commandes Equipement AdGuard**
+**Commandes Equipement Hikvision**
 ================================
 - **Rafraichir** : Permet de rafraichir manuellement l'équipement en plus de l'auto-actualisation
 - **Online** : Binaire indiquant si AdGuard répond correctement aux demandes
