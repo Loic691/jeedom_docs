@@ -6,6 +6,8 @@ description: Documentation du plugin Hikvision Event
 ---
 
 Ce plugin permet de récupérer les alarmes et exécuter quelques actions sur vos équipements Hikvision (et sous-marques).
+Pour la beta, le plugin ne gère que la remontée d'alarme. Les commandes actions arriveront dans de futures versions.
+
 
 Configuration du plugin 
 =======================
@@ -64,7 +66,7 @@ Autant de commandes info sont créées que de
 - **Region** : Générallement 4 possibles pour la plupart des évènements intelligents  
 - **Target** : La cible détectée human ou vehicule
 
-Par exemple : cette commande info est créée : **Chan 1 regionEntrance Region 1 human**
+Par exemple, cette commande info binaire est créée : **Chan 1 regionEntrance Region 1 human**
 Libre à vous de la renommer le cas échéant.
 
 > NB : Les évènements intelligentes sont plus robustes et plus fiables que les évènements simple. Par exemple la détection intrusion intelligente (fielddetection) par rapport à la détection de mouvement simple (VMD)
