@@ -5,13 +5,15 @@ title: Plugin Hikvision Event
 description: Documentation du plugin Hikvision Event
 ---
 
-Ce plugin permet de récupérer les alarmes et exécuter quelques actions sur vos équipements Hikvision (et sous-marques).
-Pour la beta, le plugin ne gère que la remontée d'alarme. Les commandes actions arriveront dans de futures versions.
+Ce plugin permet de récupérer les alarmes et d'exécuter des actions sur vos équipements Hikvision (et sous-marques).
+Les capacités (fonctionnalités) et infos systèmes (firmware, reference,...) de la caméra sont aussi récupérées et affichées (fonction à venir).
+Pour la beta, le plugin ne gère que la remontée d'alarme. Les commandes actions et infos systèmes arriveront dans les futures versions.
 Sont supportés à date :
 - La plupart des **caméras** Hikvision (si certaines ne fonctionnent pas, écrivez moi sur la community)
 - La plupart des **NVR** (non testés)
 - Les **portiers doorbell** ne sont pour l'instant pas supportés (des tests sont en cours)
-
+> NB : Attention ce plugin n'a pas vocation à gèrer la lecture des flux vidéos RTSP et MJPEG, le plugin officiel caméra de **JEEDOM** prenant en charge aisément cette fonction  de lecture vidéo. En revanche, iL est prévu dans une prochaine version que l'ajout d'une caméra dans le plugin **HIKVISIONEVENT** ajoute automatiquement le device dans le plugin caméra officiel. Cette opératation sera automatique.
+> Lors de l'enregistrement de l'équipement. Si une connexion en cours est déjà effective sur l'équipement, la connexion est **tuée** puis **relancée**.
 
 Configuration du plugin 
 =======================
