@@ -13,7 +13,7 @@ Sont supportés à date :
 - La plupart des **NVR** (non testés)
 - Les **portiers doorbell** ne sont pour l'instant pas supportés (des tests sont en cours)
 
-> Attention ce plugin n'a pas vocation à gèrer la lecture des flux vidéos RTSP et MJPEG, le plugin officiel caméra de **JEEDOM** prenant en charge aisément cette fonction  de lecture vidéo. En revanche, iL est prévu dans une prochaine version que l'ajout d'une caméra dans le plugin **HIKVISIONEVENT** ajoute automatiquement le device dans le plugin caméra officiel. Cette opératation sera automatique.
+> Attention ce plugin n'a pas vocation à gèrer la lecture des flux vidéos RTSP et MJPEG, le plugin officiel caméra de **JEEDOM** prenant en charge aisément cette fonction  de lecture vidéo. En revanche, il est prévu dans une prochaine version que l'ajout d'une caméra dans le plugin **HIKVISIONEVENT** ajoute automatiquement le device dans le plugin caméra officiel. Cette opératation sera automatique.
 
 > Lors de l'enregistrement de l'équipement. Si une connexion en cours est déjà effective sur l'équipement, la connexion est **tuée** puis **relancée**.
 
