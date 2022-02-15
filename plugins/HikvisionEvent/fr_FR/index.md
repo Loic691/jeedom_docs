@@ -25,8 +25,8 @@ Il est nécessaire de ne pas toucher aux paramètres du démon. Seul le port du 
 Quelques options sont configurables :
 - **Port du démon** qui sert à la communication entre le plugin et le démon (Il est recommandé de ne pas le modifier)
 - **Durée de rétention des images** pour la durée ou le plugin conserve les images enregistrées dans le répertoire data du plugin (fonction à venir)
-- **Pièce par défaut**
-- **Ignorer le heartbeat** (evenement videoloss inactive de hikvision)
+- **Pièce par défaut** pour une équipement nouvellement créé (fonction à venir)
+- **Ignorer le heartbeat** (evenement videoloss inactive de hikvision), fonction à venir mais il est probable que cette fonction devienne obligatoire. Less caméras en version firmware > 5.5 envoi ce heartbeat toutes les 10 secondes. Si le firmware < 5.5, le rafraichissement est toutes les 300ms.
 
 Il sera possible dans une version ultérieure de détecter les périphériques Hikvision sur votre réseau local. 
 Je réfléchis également à comment afficher les images de détection.
