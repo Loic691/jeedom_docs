@@ -13,22 +13,23 @@ Sont supportés à date :
 - La plupart des **NVR** (non testés)
 - Les **portiers doorbell** ne sont pour l'instant pas supportés (des tests sont en cours)
 
-> Attention ce plugin n'a pas vocation à gèrer la lecture des flux vidéos RTSP et MJPEG, le plugin officiel caméra de **JEEDOM** prenant en charge aisément cette fonction  de lecture vidéo. En revanche, il est prévu dans une prochaine version que l'ajout d'une caméra dans le plugin **HIKVISIONEVENT** ajoute automatiquement le device dans le plugin caméra officiel. Cette opératation sera automatique.
+> Attention ce plugin n'a pas vocation à gèrer la lecture des flux vidéos RTSP et MJPEG, le plugin officiel caméra de **JEEDOM** prenant en charge à 100% cette fonction  de lecture vidéo¨pour Hikvision. En revanche, il est prévu dans une prochaine version que l'ajout d'une caméra dans le plugin **HIKVISIONEVENT** ajoute automatiquement le device dans le plugin caméra officiel. Cette opératation sera automatique.
 
-> Lors de l'enregistrement de l'équipement. Si une connexion en cours est déjà effective sur l'équipement, la connexion est **tuée** puis **relancée**.
+> Lors de l'enregistrement de l'équipement, si une connexion sur le flux d'alarme est déjà effective sur l'équipement, la connexion est **tuée** puis **relancée**.
 
 Configuration du plugin 
 =======================
 
 Après installation du plugin, il vous suffit de l’activer. Il n'y a aucune configuration particulière à faire.
-Il est nécessaire de ne pas toucher aux paramètres du démon. Seul le port peut être modifié sur le port par défaut est déjà utilisé sur votre machine jeedom
+Il est nécessaire de ne pas toucher aux paramètres du démon. Seul le port du démon peut être modifié si celui par défaut est déjà utilisé sur votre machine jeedom
 Quelques options sont configurables :
 - **Port du démon** qui sert à la communication entre le plugin et le démon (Il est recommandé de ne pas le modifier)
-- **Durée de rétention des images** pour la durée ou le plugin conserve les images enregistrées dans le répertoire data du plugin.
+- **Durée de rétention des images** pour la durée ou le plugin conserve les images enregistrées dans le répertoire data du plugin (fonction à venir)
 - **Pièce par défaut**
 - **Ignorer le heartbeat** (evenement videoloss inactive de hikvision)
 
-Il sera possible dans une version ultérieure de détecter les périphériques Hikvision sur votre réseau local.
+Il sera possible dans une version ultérieure de détecter les périphériques Hikvision sur votre réseau local. 
+Je réfléchis également à comment afficher les images de détection.
 
 Il est également possible de réparer NodeJS le cas échéant.
 
@@ -36,7 +37,7 @@ Configuration des équipements
 =============================
 
 La configuration des équipements Hikvision est accessible à partir du menu
-plugins puis Sécurité. Vous retrouvez ici :
+plugins puis Sécurité puis Hikvision Event. Vous retrouvez ici :
 
 -   un bouton pour créer un équipement manuellement
 -   un bouton pour afficher la configuration du plugin
@@ -56,29 +57,30 @@ commandes.
 -   **IP** : l'IP de l'équipement Hikvision (doit être fixe sur votre réseau local)
 -   **Port** : Le port de l'équipement Hikvision (Généralement 80 pour HTTP et 443 pour HTTPS).
 
-> Si vous avez modifié le port par défaut (80 ou 443) vous pouvez le modifier
+> Si vous avez modifié le port par défaut (80 ou 443) sur votre device Hikvision, vous pouvez le modifier ici.
 
 ![network-ok](https://user-images.githubusercontent.com/60837526/153629872-6fe42bc2-6bce-4afb-ac7f-840899a85f14.JPG)
 
--   **Utilisateur** : Utilisateur de l'équipement Hikvision (Un utilisateur spécifique à l'API ISAPI est nécessaire avec les droits suffisants).
+-   **Utilisateur** : Utilisateur de l'équipement Hikvision (Un utilisateur spécifique à l'API ISAPI est nécessaire avec les droits suffisants). Voir ci-dessous.
 -	**Mot de passe** : Mot de passe de l'équipement Hikvision.
 
-Il n'est pas nécessaire d'activé dans le réseau avancé l'option **Hikvision-CGI athentification** ni **ONVIF** sauf si vous utilisez ces fonctionnalités par ailleurs.
+Il n'est pas nécessaire d'activer dans le réseau avancé l'option **Hikvision-CGI athentification** ni **ONVIF** sauf si vous utilisez ces fonctionnalités par ailleurs. Elles sont en revanche requise (CGI) pour l'utilisation dans le plugin caméra.
 > NB : Lors de l'enregistrement de l'équipement. Si une connexion en cours est déjà effective sur l'équipement, la connexion est **tuée** puis **relancée**.
 
 **Commandes Equipement Hikvision**
 ================================
 Les commandes d'alarmes sont automatiquement créées au fil de leur arrivée.
-A moins de savoir précisément ce que vous souhaitez utiliser comme alarme et si vous souhaitez dans un premier temps toutes les obtenir, il est conseillé de toutes les activer sur votre équipement Hikvision. Cela créera les commandes, faites votre marché, puis désactiver sur la caméra celles que vous ne souhaitez pas utiliser.
+A moins de savoir précisément ce que vous souhaitez utiliser comme alarme et si vous souhaitez dans un premier temps toutes les obtenir, il est conseillé de toutes les activer sur votre équipement Hikvision. Cela créera les commandes, faites votre marché dans **Jeedom**, puis désactiver sur la caméra celles que vous ne souhaitez pas utiliser.
 
 Autant de commandes info sont créées que de 
 - **Canaux** : 1 pour les caméras, plusieurs pour les NVR
-- **Type d'alarme** : fielddetection, linedetection, regionEntrance, unattendedBaggage, audioexception, facedetection, attendedBaggage, diskError, faceCapture, scenechangedetection, VMD, ...
-- **Region** : Générallement 4 possibles pour la plupart des évènements intelligents  
-- **Target** : La cible détectée human ou vehicule
+- **Type d'alarme** : fielddetection, linedetection, regionEntrance, unattendedBaggage, audioexception, facedetection, attendedBaggage, diskError, faceCapture, scenechangedetection, VMD, ... (Liste non exhaustive)
+- **Region** : Généralement 4 possibles pour la plupart des évènements intelligents   numérotés de 1 à 4.
+- **Target** : La cible détectée (human ou vehicule) pour les caméras prenant en charge cette fonction. (Notament la gamme Easy IP 4)
 
 Par exemple, cette commande info binaire est créée : **Chan 1 regionEntrance Region 1 human**
-Libre à vous de la renommer le cas échéant.
+Libre à vous de la renommer après coup.
+Cela vous permet de faire des scénarios très précis. Par exemple : franchissement de ligne dans un sens par une voiture, arrivée d'un objet humain dans la région 2, détection intrusion humain dans zone 4,...
 
 > NB : Les évènements intelligentes sont plus robustes et plus fiables que les évènements simple. Par exemple la détection intrusion intelligente (fielddetection) par rapport à la détection de mouvement simple (VMD).
 
