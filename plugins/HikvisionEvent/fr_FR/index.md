@@ -115,7 +115,8 @@ Créer un utilisateur dédié au plugin. La capture représente le minimum requi
 Network - Avancé
 -----------------------
 Cette partie ne concerne pas directement ce plugin et n'est donc pas nécessaire.
-En revanche elle est nécessaire si vous souhaitez intégrer la caméra dans le plugin caméra jeedom natif
+En revanche elle est nécessaire si vous souhaitez intégrer la caméra dans le plugin caméra jeedom natif.
+La liste des utilisateurs à cet endroit là ne concerne que le protocole **ONVIF**, si vous ne l'utiliser pas (pas nécessaire dans le plugin caméra), inutile de crééer des utilisateurs ONVIF.
 
 ![networkadvanced-ok](https://user-images.githubusercontent.com/60837526/153638744-d15962ed-45c4-4f75-8edd-1a1fe2d43c7e.JPG)
 
