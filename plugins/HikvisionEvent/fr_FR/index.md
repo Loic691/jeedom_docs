@@ -54,7 +54,7 @@ commandes.
 -   **Visible** : le rend visible sur le dashboard
 -   **Objet parent** : indique l’objet parent auquel appartient l’équipement
 -   **Protocole** : Protocole (HTTPS recommandé) à utiliser pour la connexion à équipement Hikvision.
--   **IP** : l'IP de l'équipement Hikvision (doit être fixe sur votre réseau local)
+-   **IP** : l'IP de l'équipement Hikvision (doit être fixe sur votre réseau local) ou FQDN de type macamera.mondomaine.com
 -   **Port** : Le port de l'équipement Hikvision (Généralement 80 pour HTTP et 443 pour HTTPS).
 
 > Si vous avez modifié le port par défaut (80 ou 443) sur votre device Hikvision, vous pouvez le modifier ici.
