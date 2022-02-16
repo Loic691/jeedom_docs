@@ -87,6 +87,9 @@ Cela vous permet de faire des scénarios très précis. Par exemple : franchisse
 Voici un exemple de commandes créées automatiquement
 ![list-commands](https://user-images.githubusercontent.com/60837526/154374788-d1077072-fbf0-48e3-8ba7-52dc0d0c357a.JPG)
 
+- Les évènements classiques (ou non intelligents) sont **VMD** (video motion detection) et **scenechangedetection** (detection changement de scene) n'ont pas de région. cette gatégorie regroupe aussi des évènements systèmes (erreur disk, erreur login, detection audio,...)
+- Les évènements intelligents comportent pour la plupart 4 régions configurables. Le plus utilisé est **fielddetection** et correspond à la détection intrusion. **linedetection** peut être aussi intéressant pour détecter l'entrée ou la sortie d'une voiture ou d'une personne. Les possibilités, en fonction des modèles de caméras, sont illimitées.
+
 > NB : Les évènements intelligentes sont plus robustes et plus fiables que les évènements simple. Par exemple la détection intrusion intelligente (fielddetection) par rapport à la détection de mouvement simple (VMD).
 
 Il est nécessaire d'activer chaque évènement désiré et d'activer pour chaque la fonction **Avertir le centre de surveillance** tel indiqué sur la capture ci-dessous.
