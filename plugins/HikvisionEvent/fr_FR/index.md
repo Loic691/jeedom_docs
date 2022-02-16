@@ -9,13 +9,15 @@ Ce plugin permet de récupérer les alarmes et d'exécuter des actions sur vos �
 Les capacités (fonctionnalités) et infos systèmes (firmware, reference,...) de la caméra sont aussi récupérées et affichées (fonction à venir).
 Pour la beta, le plugin ne gère que la remontée d'alarme. Les commandes actions et infos systèmes arriveront dans les futures versions.
 Sont supportés à date :
-- La plupart des **caméras** Hikvision (si certaines ne fonctionnent pas, écrivez moi sur la community)
-- La plupart des **NVR** (non testés)
+- La plupart des **caméras** Hikvision 
+- La plupart des **NVR**
 - Les **portiers doorbell** ne sont pour l'instant pas supportés (des tests sont en cours)
 
 > Attention ce plugin n'a pas vocation à gèrer la lecture des flux vidéos RTSP et MJPEG, le plugin officiel caméra de **JEEDOM** prenant en charge à 100% cette fonction  de lecture vidéo¨pour Hikvision. En revanche, il est prévu dans une prochaine version que l'ajout d'une caméra dans le plugin **HIKVISIONEVENT** ajoute automatiquement le device dans le plugin caméra officiel. Cette opératation sera automatique.
 
 > Lors de l'enregistrement de l'équipement, si une connexion sur le flux d'alarme est déjà effective sur l'équipement, la connexion est **tuée** puis **relancée**.
+
+> Si votre équipement n'est pas supporté, contactez moi afin que je regarde pourquoi. Normalement ce cas sera extremement rare.
 
 Configuration du plugin 
 =======================
@@ -28,25 +30,23 @@ Quelques options sont configurables :
 - **Pièce par défaut** pour une équipement nouvellement créé (fonction à venir)
 - **Ignorer le heartbeat** (evenement videoloss inactive de hikvision), fonction à venir mais il est probable que cette fonction devienne obligatoire. Less caméras en version firmware > 5.5 envoi ce heartbeat toutes les 10 secondes. Si le firmware < 5.5, le rafraichissement est toutes les 300ms.
 
-Il sera possible dans une version ultérieure de détecter les périphériques Hikvision sur votre réseau local. 
-Je réfléchis également à comment afficher les images de détection.
+Il sera possible dans une version ultérieure de détecter automatiquement les périphériques Hikvision sur votre réseau local. 
+Je réfléchis également à comment afficher les images de détection (pour les caméras qui prennent en charge cette fonction)
 
 Il est également possible de réparer NodeJS le cas échéant.
 
 Configuration des équipements 
 =============================
 
-La configuration des équipements Hikvision est accessible à partir du menu
-plugins puis Sécurité puis Hikvision Event. Vous retrouvez ici :
+La configuration des équipements Hikvision est accessible à partir du menu **plugins** puis **Sécurité** puis **Hikvision Event**.
+Vous retrouvez ici :
 
 -   un bouton pour créer un équipement manuellement
 -   un bouton pour afficher la configuration du plugin
--   un bouton qui vous donne une vue d'ensemble de tous vos équipements à un moment donné (Fonction à venir)
+-   un bouton **Santé** qui vous donne une vue d'ensemble de tous vos équipements à un moment donné (Fonction à venir)
 -   enfin en dessous vous retrouvez la liste de vos équipements Hikvision
 
-En cliquant sur un de vos équipements vous arrivez sur la page
-configuration de votre équipement comprenant 2 onglets, équipement et
-commandes.
+En cliquant sur un de vos équipements vous arrivez sur la page configuration de votre équipement comprenant 2 onglets, équipement et commandes.
 
 -   **Onglet Equipement** :
 -   **Nom de l’équipement** : nom de votre équipement
@@ -57,30 +57,35 @@ commandes.
 -   **IP** : l'IP de l'équipement Hikvision (doit être fixe sur votre réseau local) ou FQDN de type macamera.mondomaine.com
 -   **Port** : Le port de l'équipement Hikvision (Généralement 80 pour HTTP et 443 pour HTTPS).
 
-> Si vous avez modifié le port par défaut (80 ou 443) sur votre device Hikvision, vous pouvez le modifier ici.
+> Si vous avez modifié le port par défaut (80 ou 443) comme sur la capture ci-dessous sur votre device Hikvision, vous pouvez le modifier sur le plugin.
 
 ![network-ok](https://user-images.githubusercontent.com/60837526/153629872-6fe42bc2-6bce-4afb-ac7f-840899a85f14.JPG)
 
--   **Utilisateur** : Utilisateur de l'équipement Hikvision (Un utilisateur spécifique à l'API ISAPI est nécessaire avec les droits suffisants). Voir ci-dessous.
+-   **Utilisateur** : Utilisateur de l'équipement Hikvision (Un utilisateur spécifique à l'API ISAPI est nécessaire avec les droits suffisants). Voir ci-dessous. 
 -	**Mot de passe** : Mot de passe de l'équipement Hikvision.
 
-Il n'est pas nécessaire d'activer dans le réseau avancé l'option **Hikvision-CGI athentification** ni **ONVIF** sauf si vous utilisez ces fonctionnalités par ailleurs. Elles sont en revanche requise (CGI) pour l'utilisation dans le plugin caméra.
+> NB : L'utilisateur Admin n'est pas autorisé.
+
+Il n'est pas nécessaire d'activer pour le plugin dans le réseau avancé l'option **Hikvision-CGI athentification** ni **ONVIF** sauf si vous utilisez ces fonctionnalités par ailleurs. Elles sont en revanche **requise** (CGI) pour l'utilisation du périphérique dans le plugin caméra. L'option CGI semble activer par défaut sur les NVR.
 > NB : Lors de l'enregistrement de l'équipement. Si une connexion en cours est déjà effective sur l'équipement, la connexion est **tuée** puis **relancée**.
 
-**Commandes Equipement Hikvision**
+**Commandes Info Equipement Hikvision**
 ================================
-Les commandes d'alarmes sont automatiquement créées au fil de leur arrivée.
-A moins de savoir précisément ce que vous souhaitez utiliser comme alarme et si vous souhaitez dans un premier temps toutes les obtenir, il est conseillé de toutes les activer sur votre équipement Hikvision. Cela créera les commandes, faites votre marché dans **Jeedom**, puis désactiver sur la caméra celles que vous ne souhaitez pas utiliser.
+Les commandes d'alarmes sont automatiquement créées au fil de leur arrivée. Elles sont de type Binaire.
+A moins de savoir précisément ce que vous souhaitez utiliser comme alarme et si vous souhaitez dans un premier temps toutes les obtenir, il est conseillé de toutes les activer sur votre équipement Hikvision. Cela créera les commandes, faites votre marché dans **Jeedom**, puis désactiver sur la caméra celles que vous ne souhaitez pas utiliser. Cela vous évitera d'avoir trop de déclenchements dans l'application (gratuite) **HIK-CONNECT**
 
 Autant de commandes info sont créées que de 
 - **Canaux** : 1 pour les caméras, plusieurs pour les NVR
-- **Type d'alarme** : fielddetection, linedetection, regionEntrance, unattendedBaggage, audioexception, facedetection, attendedBaggage, diskError, faceCapture, scenechangedetection, VMD, ... (Liste non exhaustive)
+- **Type d'alarme** : fielddetection, linedetection, regionEntrance, unattendedBaggage, audioexception, facedetection, attendedBaggage, diskError, faceCapture, scenechangedetection, VMD, ... (Liste non exhaustive dépendante des caméras)
 - **Region** : Généralement 4 possibles pour la plupart des évènements intelligents   numérotés de 1 à 4.
-- **Target** : La cible détectée (human ou vehicule) pour les caméras prenant en charge cette fonction. (Notament la gamme Easy IP 4)
+- **Target** : La cible détectée (human ou vehicule) pour les caméras prenant en charge cette fonction. (Notament la gamme Accusense Easy IP 4)
 
 Par exemple, cette commande info binaire est créée : **Chan 1 regionEntrance Region 1 human**
 Libre à vous de la renommer après coup.
 Cela vous permet de faire des scénarios très précis. Par exemple : franchissement de ligne dans un sens par une voiture, arrivée d'un objet humain dans la région 2, détection intrusion humain dans zone 4,...
+
+Voici un exemple de commandes créées automatiquement
+![list-commands](https://user-images.githubusercontent.com/60837526/154374788-d1077072-fbf0-48e3-8ba7-52dc0d0c357a.JPG)
 
 > NB : Les évènements intelligentes sont plus robustes et plus fiables que les évènements simple. Par exemple la détection intrusion intelligente (fielddetection) par rapport à la détection de mouvement simple (VMD).
 
@@ -95,10 +100,6 @@ Système - Config système
 -----------------------
 
 ![systemvca](https://user-images.githubusercontent.com/60837526/153620665-1a235508-fef7-402a-830f-5885f31251da.JPG)
-
-- **Statut protection** : Binaire indiquant l'état de la protection globale
-- **Activer la protection** : Action permettant d'activer la protection globale
-- **Désactiver la protection** : Action permettant de désactiver la protection globale
 
 Système - Sécurité
 -----------------------
