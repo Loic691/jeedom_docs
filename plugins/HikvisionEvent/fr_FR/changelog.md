@@ -8,13 +8,22 @@ Si rien n'est indiqué, il s'agit probablement d'une petite mise à jour pour la
 
 # En Beta
 
-- Création de la version beta.
+- **17/02/2022**  Passage en public de la version beta après période de test avec des membres de la community
+- **03/02/2022**  Réécriture d'une bibliotèque de gestion d'alarme avec l'API ISAPI
+- **05/01/2022**  Création de la version beta
 
-# 11/02/2022
+# Stable prévue au 01/03/2022
 
-- Modification des docs associés au projet
+- Gestion du flux d'alarmes des caméras et NVR
+- Génération des commandes infos binaires en automatique au fil de l'arrivée des évènements
+- 
 
-# 10/02/2022
+# Stable prévue au 01/04/2022
 
-- Initialisation du plugin
+- Activation / Désactivation de la détection de mouvement par type d'alarme (fielddetection, linedetection, VMD,...)
+- Affichge des capacités d'alarmes de l'équipement
+- Affichage des infos systèmes
+- Reboot de la caméra via le plugin
+- Mise en place de la rétention des fichiers JPG enregistrés dans le répertoire data du plugin
+- Commandes PTZ (à voir si utile)
 
