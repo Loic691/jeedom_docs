@@ -7,6 +7,7 @@ description: Changelog du plugin Hikvision Event
 Si rien n'est indiqué, il s'agit probablement d'une petite mise à jour pour la compatibilité Jeedom V4
 
 # En Beta
+- **17/02/2022**  Modif. du nom des fichiers JSON enregistrés dans le répertoire du plugin **/hikvisionevent/data/XXX/**. Ajout des fichiers active/inactive à des fins de debug
 - **17/02/2022**  Ajout des commandes "vu dernièrement" et "Chan X Dernière alarme"
 - **17/02/2022**  Passage en public de la version beta après période de test avec des membres de la community
 - **03/02/2022**  Réécriture d'une bibliotèque de gestion d'alarme avec l'API ISAPI
