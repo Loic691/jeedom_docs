@@ -9,6 +9,7 @@ Si rien n'est indiqué, il s'agit probablement d'une petite mise à jour pour la
 # En Beta
 - **18/02/2022**  Fix du problème de communication avec le deamon lors d'une mise à jour du plugin
 - **18/02/2022**  Mise à jour des commandes d'alarmes avec la répétitions de valeur et le returnstate à 0 (utile pour les NVR)
+- **18/02/2022**  Ajout de la région dans les noms de fichier XML et JSON générés dans le répertoire data du plugin (il faut supprimer tout ce répertoire pour regénération)
 - **18/02/2022**  Ajout de l'enregistrement des fichiers XML bruts reçus par l'API enregistrés dans le répertoire du plugin **/hikvisionevent/data/XXX/**
 - **17/02/2022**  Modif. du nom des fichiers JSON enregistrés dans le répertoire du plugin **/hikvisionevent/data/XXX/**. Ajout des fichiers active/inactive à des fins de debug
 - **17/02/2022**  Ajout des commandes "vu dernièrement" et "Chan X Dernière alarme"
