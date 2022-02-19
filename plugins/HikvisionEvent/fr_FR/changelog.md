@@ -7,6 +7,7 @@ description: Changelog du plugin Hikvision Event
 Si rien n'est indiqué, il s'agit probablement d'une petite mise à jour pour la compatibilité Jeedom V4
 
 # En Beta
+- **19/02/2022**  Fix du message d'erreur dans les logs lors de la supression d'un équipement.
 - **18/02/2022**  Fix du problème de communication avec le deamon lors d'une mise à jour du plugin
 - **18/02/2022**  Mise à jour des commandes d'alarmes avec la répétitions de valeur et le returnstate à 0 (utile pour les NVR)
 - **18/02/2022**  Ajout de la région dans les noms de fichier XML et JSON générés dans le répertoire data du plugin (il faut supprimer tout ce répertoire pour regénération)
