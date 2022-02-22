@@ -7,7 +7,7 @@ description: Changelog du plugin Hikvision Event
 Si rien n'est indiqué, il s'agit probablement d'une petite mise à jour pour la compatibilité Jeedom V4
 
 # En Beta
-- **22/02/2022**  Ajout d'une fonction de lecture dans le device permettant de récupérer infos systèmes et possibilités de l'équipement. JSON/XML ajoutés dans /data/XXX
+- **22/02/2022**  Ajout d'une fonction de lecture dans le device permettant de récupérer infos systèmes et possibilités de l'équipement. Ces données sont présentes dans les fichiers JSON/XML ajoutés dans le répertoire **/hikvisionevent/data/XXX/**. Fonctionnalité nécessaire afin de remonter les éléménts dans jeedom sur la prochaine beta
 - **19/02/2022**  Fix du probleme générant un message d'erreur dans les logs lors de la supression d'un équipement.
 - **18/02/2022**  Fix du problème de communication avec le deamon lors d'une mise à jour du plugin
 - **18/02/2022**  Mise à jour des commandes d'alarmes avec la répétitions de valeur et le returnstate à 0 (utile pour les NVR)
