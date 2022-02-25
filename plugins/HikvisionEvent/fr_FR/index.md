@@ -27,6 +27,9 @@ Sont supportés à date :
 Configuration du plugin 
 =======================
 
+Paramètres
+-----------------------
+
 Après installation du plugin, il vous suffit de l’activer. Il n'y a aucune configuration particulière à faire.
 Il est nécessaire de ne pas toucher aux paramètres du démon. Seul le port du démon peut être modifié si celui par défaut est déjà utilisé sur votre machine jeedom
 Quelques options sont configurables :
@@ -40,8 +43,8 @@ Je réfléchis également à comment afficher les images de détection (pour les
 
 Il est également possible de réparer NodeJS le cas échéant.
 
-Configuration des équipements 
-=============================
+Equipements
+-----------------------
 
 La configuration des équipements Hikvision est accessible à partir du menu **plugins** puis **Sécurité** puis **Hikvision Event**.
 Vous retrouvez ici :
@@ -76,12 +79,12 @@ En cliquant sur un de vos équipements vous arrivez sur la page configuration de
 Il n'est pas nécessaire d'activer pour le plugin dans le réseau avancé l'option **Hikvision-CGI athentification** ni **ONVIF** sauf si vous utilisez ces fonctionnalités par ailleurs. Elles sont en revanche **requise** (CGI) pour l'utilisation du périphérique dans le plugin caméra. L'option CGI semble activer par défaut sur les NVR.
 > NB : Lors de l'enregistrement de l'équipement. Si une connexion en cours est déjà effective sur l'équipement, la connexion est **tuée** puis **relancée**.
 
-Affichages des infos systèmes Hikvision 
-=============================
+Informations devices Hikvision
+-----------------------
 Une fois la configuration enregistrée. Le plugin lance la connexion au device. Si elle réussie (peut être assez long la 1ère fois), s'affichera dans la page config de l'équipements l'ensemble des informations systèmes remontés par le périphérique Hikvision (Firwmare, Hardware, Type, Ref, Numéro de série, Adresse MAC,...)
 
-**Commandes Info Equipement Hikvision**
-================================
+Commandes générées
+-----------------------
 Les commandes d'alarmes sont automatiquement créées au fil de leur arrivée. Elles sont de type Binaire.
 A moins de savoir précisément ce que vous souhaitez utiliser comme alarme et si vous souhaitez dans un premier temps toutes les obtenir, il est conseillé de toutes les activer sur votre équipement Hikvision. Cela créera les commandes, faites votre marché dans **Jeedom**, puis désactiver sur la caméra celles que vous ne souhaitez pas utiliser. Cela vous évitera d'avoir trop de déclenchements dans l'application (gratuite) **HIK-CONNECT**.
 
@@ -108,6 +111,12 @@ Voici un exemple de commandes créées automatiquement
 Il est nécessaire d'activer chaque évènement désiré et d'activer pour chaque la fonction **Avertir le centre de surveillance** tel indiqué sur la capture ci-dessous.
 
 ![event-ok](https://user-images.githubusercontent.com/60837526/153620262-998acf82-b909-43b9-a281-8d7889c0554c.jpg)
+
+En parallèle sont aussi créées les commandes :
+- Heartbeat (état) de le device
+- Dernière communication avec le device
+- Dernière alarme sur le channel (créé une fois par Channel)
+
 
 **Paramètrage des caméras ou NVR Hikvision**
 =====================================================
