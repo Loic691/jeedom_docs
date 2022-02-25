@@ -9,15 +9,17 @@ Ce plugin permet de récupérer les alarmes et d'exécuter des actions sur vos �
 Les capacités (fonctionnalités) et infos systèmes (firmware, reference,...) de la caméra sont aussi récupérées et affichées (fonction à venir).
 Pour la beta, le plugin ne gère que la remontée d'alarme. Les commandes actions et infos systèmes arriveront dans les futures versions.
 Sont supportés à date :
-- La plupart des **caméras** Hikvision 
-- La plupart des **NVR**
-- Les **portiers doorbell** ne sont pour l'instant pas supportés (des tests sont en cours)
+- Toutes les **caméras** Hikvision et sous marques
+- Tous les **NVR** Hikvision et sous marques
+- Les **portiers Hikvision doorbell** ne sont pour l'instant pas supportés (des tests sont en cours)
+
+> Attention, Suite changement sur les clefs API dans  le core Jeedom >= 4.2.13, si vous n'avez pas de remontée d'alarmes dans les logs, il faut vérifier que la clé API du plugin est bien activé dans les paramètres de JEEDOM (Réglage/Système/Configuration/API)
 
 > Attention ce plugin n'a pas vocation à gèrer la lecture des flux vidéos RTSP et MJPEG, le plugin officiel caméra de **JEEDOM** prenant en charge à 100% cette fonction  de lecture vidéo¨pour Hikvision. En revanche, il est prévu dans une prochaine version que l'ajout d'une caméra dans le plugin **HIKVISIONEVENT** ajoute automatiquement le device dans le plugin caméra officiel. Cette opératation sera automatique.
 
 > Lors de l'enregistrement de l'équipement, si une connexion sur le flux d'alarme est déjà effective sur l'équipement, la connexion est **tuée** puis **relancée**.
 
-> Si votre équipement n'est pas supporté, contactez moi afin que je regarde pourquoi. Normalement ce cas sera extremement rare.
+> Si vous rencontrez un problème dans le support de votre équipement Hikvision, contactez moi pour analyse et correction (Cas extremement rares).
 
 Configuration du plugin 
 =======================
@@ -44,6 +46,8 @@ Vous retrouvez ici :
 -   un bouton pour créer un équipement manuellement
 -   un bouton pour afficher la configuration du plugin
 -   un bouton **Santé** qui vous donne une vue d'ensemble de tous vos équipements à un moment donné (Fonction à venir)
+-   un bouton **Community** qui pointe sur le fil de discussion de ce plugin sur la community
+-   un bouton **Documentation** qui pointe sur cette présente documentation
 -   enfin en dessous vous retrouvez la liste de vos équipements Hikvision
 
 En cliquant sur un de vos équipements vous arrivez sur la page configuration de votre équipement comprenant 2 onglets, équipement et commandes.
@@ -68,6 +72,10 @@ En cliquant sur un de vos équipements vous arrivez sur la page configuration de
 
 Il n'est pas nécessaire d'activer pour le plugin dans le réseau avancé l'option **Hikvision-CGI athentification** ni **ONVIF** sauf si vous utilisez ces fonctionnalités par ailleurs. Elles sont en revanche **requise** (CGI) pour l'utilisation du périphérique dans le plugin caméra. L'option CGI semble activer par défaut sur les NVR.
 > NB : Lors de l'enregistrement de l'équipement. Si une connexion en cours est déjà effective sur l'équipement, la connexion est **tuée** puis **relancée**.
+
+Affichages des infos systèmes Hikvision 
+=============================
+Une fois la configuration enregistrée. Le plugin lance la connexion au device. Si elle réussie (peut être assez long la 1ère fois), s'affichera dans la page config de l'équipements l'ensemble des informations systèmes remontés par le périphérique Hikvision (Firwmare, Hardware, Type, Ref, Numéro de série, Adresse MAC,...)
 
 **Commandes Info Equipement Hikvision**
 ================================
