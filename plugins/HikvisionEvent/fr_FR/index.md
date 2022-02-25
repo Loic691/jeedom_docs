@@ -5,6 +5,9 @@ title: Plugin Hikvision Event
 description: Documentation du plugin Hikvision Event
 ---
 
+Présentation 
+=======================
+
 Ce plugin permet de récupérer les alarmes et d'exécuter des actions sur vos équipements Hikvision (et sous-marques).
 Les capacités (fonctionnalités) et infos systèmes (firmware, reference,...) de la caméra sont aussi récupérées et affichées (fonction à venir).
 Pour la beta, le plugin ne gère que la remontée d'alarme. Les commandes actions et infos systèmes arriveront dans les futures versions.
