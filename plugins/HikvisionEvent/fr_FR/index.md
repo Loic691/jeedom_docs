@@ -151,7 +151,7 @@ Config système complémentaire
 -----------------------
 A venir
 
-**Paramètrage des portiers doorbell Hikvision**
+**Portiers doorbell Hikvision**
 ==============================================
 A venir suivant compatibilité.
 authentification DIGEST obligatoire sur certains modèles.
