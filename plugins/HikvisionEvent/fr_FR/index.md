@@ -132,6 +132,14 @@ La liste des utilisateurs à cet endroit là ne concerne que le protocole **ONVI
 
 ![networkadvanced-ok](https://user-images.githubusercontent.com/60837526/153638744-d15962ed-45c4-4f75-8edd-1a1fe2d43c7e.JPG)
 
+Cas particuliers des NVR
+=============================
+Les NVR Hikvision sont pleinement supportés par ce plugin.
+En revanche suivant la gamme, NI-K (light) et NI-I (plus haut de gamme), toutes les fonctionnalités ne sont pas prises en charge de la même façon que sur une caméra. C'est lié à 100% de ce que remonte l'API ISAPI Hikvision. Exemples :
+- Sur les NI-K, les régions de détection ne remontent pas. Elles sont prises en charge dans les NI-I suite à une correction d'index éronnée dans l'API
+- Sur l'ensemble des NVR l'évènement correspondant à la fin d'une alarme n'est jamais remonté à JEEODOM. La retombée à 0 de la commande ad-hoc est gérée par la fonction du core returnstate. Info remise donc à 0 au bout d'une minute. Sur une caméra, cette sécurité est tout de même présente mais la fin d'alarme est gérée par les évènements reçus à travers l'API.
+- l'alarme illAccess (Login éronné sur la web interface du device) n'est pas remonté sur certains NVR lights Ni-K
+- Les targets de détection (voiture et/ou humain) ne sont jamais remontés à ma connaissance à travers ISAPI depuis les NVR vers Jeedom. si vous souhaitez pouvoir gérer ce type d'évènements plus finement, il est nécessaire, en plus du NVR, de rentrer vos caméras en tant qu'équipement du plugin JEEDOM.
 
 **Paramètrage des portiers doorbell Hikvision**
 ==============================================
