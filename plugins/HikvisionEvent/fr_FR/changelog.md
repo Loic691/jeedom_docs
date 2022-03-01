@@ -25,7 +25,7 @@ Si rien n'est indiqué, il s'agit probablement d'une petite mise à jour pour la
 - **03/02/2022**  Réécriture d'une bibliotèque de gestion d'alarme avec l'API ISAPI
 - **05/01/2022**  Création de la version beta
 
-# Stable  au 01/03/2022
+# 20220301-stable
 
 - Gestion du flux d'alarmes des Caméras et NVRs
 - Affichage des infos hikvision dans la page équipement
