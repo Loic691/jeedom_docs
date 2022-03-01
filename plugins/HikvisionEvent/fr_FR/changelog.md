@@ -8,6 +8,7 @@ Si rien n'est indiqué, il s'agit probablement d'une petite mise à jour pour la
 > Attention, Suite changement sur les clefs API dans  le core Jeedom >= 4.2.13, si vous n'avez pas de remontée d'alarmes dans les logs, il faut vérifier que la clé API du plugin est bien activé dans les paramètres de JEEDOM (Réglage/Système/Configuration/API)
 
 # En Beta
+- **01/03/2022**  Ajout des Fonctionnalités du device (capabilities)
 - **01/03/2022**  Amélioration du temps de démarrage du deamon et du retour sur l'enregistrement d'un device
 - **25/02/2022**  Fix plusieurs problèmes notament sur Raspberry ou device jeedom lents. Affichage dans les logs des capabilities. Optimisation du code, Changement de la méthodologie de gestion des requetes HTTP(s) sur les devices HIK. Ajout d'un status de connexion et d'un status du deamon interrogés par le plugin. Ajut des icones documentations et community (attente du tag en cours de la team) dans le plugin. Fix définitif index région sur NVR
 - **23/02/2022**  Ajout des infos systèmes du device hikvision dans la page config de l'équipement. Ajout des images d'équipements
