@@ -18,7 +18,7 @@ Sont supportés à date :
 
 > Attention, Suite changement sur les clefs API dans  le core Jeedom >= 4.2.13, si vous n'avez pas de remontée d'alarmes dans les logs, il faut vérifier que la clé API du plugin est bien activé dans les paramètres de JEEDOM (Réglage/Système/Configuration/API)
 
-> Attention ce plugin n'a pas vocation à gèrer la lecture des flux vidéos RTSP et MJPEG, le plugin officiel caméra de **JEEDOM** prenant en charge à 100% cette fonction  de lecture vidéo¨pour Hikvision. En revanche, il est prévu dans une prochaine version que l'ajout d'une caméra dans le plugin **HIKVISIONEVENT** ajoute automatiquement le device dans le plugin caméra officiel. Cette opératation sera automatique.
+> Attention ce plugin n'a pas vocation à gèrer la lecture des flux vidéos RTSP et MJPEG, le plugin officiel caméra de **JEEDOM** prenant en charge à 100% cette fonction  de lecture vidéo pour Hikvision. En revanche, il est prévu dans une prochaine version que l'ajout d'une caméra dans le plugin **HIKVISIONEVENT** ajoute automatiquement le device dans le plugin caméra officiel. Cette opération sera automatique.
 
 > Lors de l'enregistrement de l'équipement, si une connexion sur le flux d'alarme est déjà effective sur l'équipement, la connexion est **tuée** puis **relancée**.
 
@@ -35,8 +35,8 @@ Il est nécessaire de ne pas toucher aux paramètres du démon. Seul le port du 
 Quelques options sont configurables :
 - **Port du démon** qui sert à la communication entre le plugin et le démon (Il est recommandé de ne pas le modifier)
 - **Durée de rétention des images** pour la durée ou le plugin conserve les images enregistrées dans le répertoire data du plugin (fonction à venir)
-- **Pièce par défaut** pour une équipement nouvellement créé (fonction à venir)
-- **Ignorer le heartbeat** (evenement videoloss inactive de hikvision), fonction à venir mais il est probable que cette fonction devienne obligatoire. Less caméras en version firmware > 5.5 envoi ce heartbeat toutes les 10 secondes. Si le firmware < 5.5, le rafraichissement est toutes les 300ms.
+- **Pièce par défaut** pour un équipement nouvellement créé (fonction à venir)
+- **Ignorer le heartbeat** (evenement videoloss inactive de hikvision), fonction à venir mais il est probable que cette fonction devienne obligatoire. Les caméras en version firmware > 5.5 envoi ce heartbeat toutes les 10 secondes. Si le firmware < 5.5, le rafraichissement est toutes les 300ms.
 
 Il sera possible dans une version ultérieure de détecter automatiquement les périphériques Hikvision sur votre réseau local. 
 Je réfléchis également à comment afficher les images de détection (pour les caméras qui prennent en charge cette fonction)
@@ -76,7 +76,7 @@ En cliquant sur un de vos équipements vous arrivez sur la page configuration de
 
 > NB : L'utilisateur Admin n'est pas autorisé.
 
-Il n'est pas nécessaire d'activer pour le plugin dans le réseau avancé l'option **Hikvision-CGI athentification** ni **ONVIF** sauf si vous utilisez ces fonctionnalités par ailleurs. Elles sont en revanche **requise** (CGI) pour l'utilisation du périphérique dans le plugin caméra. L'option CGI semble activer par défaut sur les NVR.
+Il n'est pas nécessaire d'activer pour le plugin dans le réseau avancé l'option **Hikvision-CGI athentification** ni **ONVIF** sauf si vous utilisez ces fonctionnalités par ailleurs. Elles sont en revanche **requise** (CGI) pour l'utilisation du périphérique dans le plugin caméra. L'option CGI semble activée par défaut sur les NVR.
 > NB : Lors de l'enregistrement de l'équipement. Si une connexion en cours est déjà effective sur l'équipement, la connexion est **tuée** puis **relancée**.
 
 Informations devices Hikvision
@@ -88,7 +88,7 @@ Commandes générées
 Les commandes d'alarmes sont automatiquement créées au fil de leur arrivée. Elles sont de type Binaire.
 A moins de savoir précisément ce que vous souhaitez utiliser comme alarme et si vous souhaitez dans un premier temps toutes les obtenir, il est conseillé de toutes les activer sur votre équipement Hikvision. Cela créera les commandes, faites votre marché dans **Jeedom**, puis désactiver sur la caméra celles que vous ne souhaitez pas utiliser. Cela vous évitera d'avoir trop de déclenchements dans l'application (gratuite) **HIK-CONNECT**.
 
-> NB : Les commandes d'alarmes sont créées avec un return state à 0 au bout de 1 minute par sécurité. La gestion de la répétition des valeurs est activée nativement par le plugin. Cela permet de redéclencher un scnério sur nouvelle alarme alors que la précédenrte n'est pas acquittée.
+> NB : Les commandes d'alarmes sont créées avec un return state à 0 au bout de 1 minute par sécurité. La gestion de la répétition des valeurs est activée nativement par le plugin. Cela permet de redéclencher un scénario sur nouvelle alarme alors que la précédenrte n'est pas acquittée.
 
 Autant de commandes info sont créées que de 
 - **Canaux** : 1 pour les caméras, plusieurs pour les NVR
@@ -103,10 +103,10 @@ Cela vous permet de faire des scénarios très précis. Par exemple : franchisse
 Voici un exemple de commandes créées automatiquement
 ![list-commands](https://user-images.githubusercontent.com/60837526/154374788-d1077072-fbf0-48e3-8ba7-52dc0d0c357a.JPG)
 
-- Les évènements classiques (ou non intelligents) sont **VMD** (video motion detection) et **scenechangedetection** (detection changement de scene) n'ont pas de région. cette gatégorie regroupe aussi des évènements systèmes (erreur disk, erreur login, detection audio,...)
+- Les évènements classiques (ou non intelligents) sont **VMD** (video motion detection) et **scenechangedetection** (detection changement de scene) n'ont pas de région. cette catégorie regroupe aussi des évènements systèmes (erreur disk, erreur login, detection audio,...)
 - Les évènements intelligents comportent pour la plupart 4 régions configurables. Le plus utilisé est **fielddetection** et correspond à la détection intrusion. **linedetection** peut être aussi intéressant pour détecter l'entrée ou la sortie d'une voiture ou d'une personne. Les possibilités, en fonction des modèles de caméras, sont illimitées.
 
-> NB : Les évènements intelligentes sont plus robustes et plus fiables que les évènements simple. Par exemple la détection intrusion intelligente (fielddetection) par rapport à la détection de mouvement simple (VMD).
+> NB : Les évènements intelligents sont plus robustes et plus fiables que les évènements simple. Par exemple la détection intrusion intelligente (fielddetection) par rapport à la détection de mouvement simple (VMD).
 
 Il est nécessaire d'activer chaque évènement désiré et d'activer pour chaque la fonction **Avertir le centre de surveillance** tel indiqué sur la capture ci-dessous.
 
