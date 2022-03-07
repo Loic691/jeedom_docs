@@ -39,7 +39,8 @@ Si rien n'est indiqué, il s'agit probablement d'une petite mise à jour pour la
 - Reboot de la caméra via le plugin
 - Mise en place de la rétention des fichiers JPG enregistrés dans le répertoire data du plugin
 - Commandes PTZ (à voir si utile)
-
+- Affichage du lien http pour se connecter à la caméra directement
+ 
 # Stable prévue au 01/05/2022
 
 - Détection automatiques des périphériques HIKVISION avec le protocole mDNS utilisé par le SADP Tool de Hik
