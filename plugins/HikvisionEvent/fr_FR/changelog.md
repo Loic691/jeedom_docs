@@ -40,3 +40,8 @@ Si rien n'est indiqué, il s'agit probablement d'une petite mise à jour pour la
 - Mise en place de la rétention des fichiers JPG enregistrés dans le répertoire data du plugin
 - Commandes PTZ (à voir si utile)
 
+# Stable prévue au 01/05/2022
+
+- Détection automatiques des périphériques HIKVISION avec le protocole mDNS utilisé par le SADP Tool de Hik
+
+
