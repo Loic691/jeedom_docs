@@ -53,10 +53,13 @@ Vous retrouvez ici :
 
 -   un bouton pour **ajouter** un équipement manuellement
 -   un bouton pour **afficher** les paramètres du plugin
+-   un bouton **Télécharger Image** qui vous permet d'uploader depuis votre PC l'image d'un équipement
 -   un bouton **Santé** qui vous donne une vue d'ensemble de tous vos équipements à un moment donné (Fonction à venir)
 -   un bouton **Community** qui pointe sur le fil de discussion de ce plugin sur la community
 -   un bouton **Documentation** qui pointe sur cette présente documentation
 -   enfin en dessous vous retrouvez la liste de vos équipements Hikvision
+
+![ListeDevice](https://user-images.githubusercontent.com/60837526/157309869-6723c9bd-ada1-4e38-b927-b89088eb3a2a.JPG)
 
 En cliquant sur un de vos équipements vous arrivez sur la page configuration de votre équipement comprenant 2 onglets, équipement et commandes.
 
@@ -77,8 +80,6 @@ En cliquant sur un de vos équipements vous arrivez sur la page configuration de
 > NB : L'utilisateur Admin n'est pas autorisé.
 -	**Mot de passe** : Mot de passe de l'équipement Hikvision.
 -	**Image** : Image alternative pour remplacer l'image par défaut d'un équipement. Peut être uploadée depuis le bouton **Télécharger Image** de la page principale du plugin. Il est conseillé de trouver une image PNG avec fond transparent pour que la liste reste cohérente avec le design Jeedom. La recherche d'image à fond transparent peut facilement être effectuée avec Google rubrique Image puis dans les paramètres avancés de la recherche, possibilité de spécifier les paramètres d'image (résolution, fond transparent,...)
-
-![ListeDevice](https://user-images.githubusercontent.com/60837526/157309869-6723c9bd-ada1-4e38-b927-b89088eb3a2a.JPG)
 
 Il n'est pas nécessaire d'activer pour le plugin dans le réseau avancé l'option **Hikvision-CGI athentification** ni **ONVIF** sauf si vous utilisez ces fonctionnalités par ailleurs. Elles sont en revanche **requise** (CGI) pour l'utilisation du périphérique dans le plugin caméra. L'option CGI semble activée par défaut sur les NVR.
 > NB : Lors de l'enregistrement de l'équipement. Si une connexion en cours est déjà effective sur l'équipement, la connexion est **tuée** puis **relancée**.
