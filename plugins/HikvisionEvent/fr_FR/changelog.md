@@ -41,6 +41,7 @@ Si rien n'est indiqué, il s'agit probablement d'une petite mise à jour pour la
 - Mise en place de la rétention des fichiers JPG enregistrés dans le répertoire data du plugin
 - Commandes PTZ (à voir si utile)
 - Affichage du lien http pour se connecter à la caméra directement
+- Intégration de la lib mDNS en vue de la détection automatique des device (OK en BETA)
  
 # Stable prévue au 01/05/2022
 
