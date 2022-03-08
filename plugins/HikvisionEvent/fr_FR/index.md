@@ -85,7 +85,7 @@ Informations devices Hikvision
 -----------------------
 Une fois la configuration enregistrée. Le plugin lance la connexion au device. Si elle réussie (peut être assez long la 1ère fois), s'affichera dans la page config de l'équipements l'ensemble des informations systèmes et fonctionnalités remontées par le périphérique Hikvision (Firwmare, Hardware, Type, Ref, Numéro de série, Adresse MAC,...)
 
-![DeviceInfo](https://user-images.githubusercontent.com/60837526/157260827-ec9e90be-a62e-452f-8a97-eeabfee17c2a.JPG)
+![DeviceInfo-ok](https://user-images.githubusercontent.com/60837526/157261269-ced544df-f5ed-4b6d-8ab9-3d4a89fb8d36.JPG)
 
 Commandes générées
 -----------------------
