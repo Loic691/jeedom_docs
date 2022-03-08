@@ -83,7 +83,7 @@ Il n'est pas nécessaire d'activer pour le plugin dans le réseau avancé l'opti
 
 Informations devices Hikvision
 -----------------------
-Une fois la configuration enregistrée. Le plugin lance la connexion au device. Si elle réussie (peut être assez long la 1ère fois), s'affichera dans la page config de l'équipements l'ensemble des informations systèmes et fonctionnalités remontées par le périphérique Hikvision (Firwmare, Hardware, Type, Ref, Numéro de série, Adresse MAC,...)
+Une fois la configuration enregistrée. Le plugin lance la connexion au device. Si elle réussie (peut être assez long la 1ère fois), s'affichera dans la page config de l'équipements l'ensemble des informations systèmes et fonctionnalités remontées par le périphérique Hikvision (Firwmare, Hardware, Type, Ref, Numéro de série, Adresse MAC, évènements supportés,...)
 
 ![DeviceInfo-ok](https://user-images.githubusercontent.com/60837526/157261269-ced544df-f5ed-4b6d-8ab9-3d4a89fb8d36.JPG)
 
@@ -117,9 +117,10 @@ Il est nécessaire d'activer chaque évènement désiré et d'activer pour chaqu
 ![event-ok](https://user-images.githubusercontent.com/60837526/153620262-998acf82-b909-43b9-a281-8d7889c0554c.jpg)
 
 En parallèle sont aussi créées les commandes :
-- Heartbeat (état) de le device
+- Heartbeat (état) du périphérique (1 si connecté, sinon 0)
 - Dernière communication avec le device
-- Dernière alarme sur le channel (créé une fois par Channel)
+- Dernière date d'alarme sur chaque channel (Sur les NVR, cela permet d'avoir une date par caméra)
+- Reboot du périphérique (Il est nécessaire d'avoir mis les bons droits dans la création du user. Voir config gestion des utilisateurs ci-dessous)
 
 
 **Paramètrage des caméras ou NVR Hikvision**
