@@ -32,12 +32,12 @@ Si rien n'est indiqué, il s'agit probablement d'une petite mise à jour pour la
 - Gestion du flux d'alarmes des Caméras et NVRs
 - Affichge des capacités d'alarmes de l'équipement
 - Affichage des infos systèmes
-- En attente de validation par la team JEEDOM
 
 # Stable prévue au 01/04/2022
 
 - Activation / Désactivation de la détection de mouvement par type d'alarme (fielddetection, linedetection, VMD,...)
-- Reboot de la caméra via le plugin
+- Changement de l'image d'un périphérique avec fonction d'upload de l'image (OK en BETA)
+- Reboot de la caméra via le plugin (OK en BETA)
 - Mise en place de la rétention des fichiers JPG enregistrés dans le répertoire data du plugin
 - Commandes PTZ (à voir si utile)
 - Affichage du lien http pour se connecter à la caméra directement
