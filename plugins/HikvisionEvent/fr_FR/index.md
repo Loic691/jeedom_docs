@@ -128,7 +128,7 @@ La connexion au flux d'alarme du périphérique est lancé lors du démarrage du
 A la connexion initiale, le périphérique est intérogé et retourne ses infos et ses fonctionnalités.
 En cas de perte de connexion sur le flux d'alarme, celui ci est relancé automatiquement toutes les 30 secondes.
 
-> NB : Si lors de l'intérrogation initiale (deamon_sart et postsave), le périphérique n'est pas joignable, alors la connextion au flux d'alarme est abandonnée et ne sera pas relancée.
+> NB : Si lors de l'intérrogation initiale (deamon_sart et postsave), le périphérique n'est pas joignable, alors la connexion au flux d'alarme est abandonnée et ne sera pas relancée.
 
 **Paramètrage des caméras ou NVR Hikvision**
 =====================================================
