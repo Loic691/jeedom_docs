@@ -74,9 +74,11 @@ En cliquant sur un de vos équipements vous arrivez sur la page configuration de
 ![network-ok](https://user-images.githubusercontent.com/60837526/153629872-6fe42bc2-6bce-4afb-ac7f-840899a85f14.JPG)
 
 -   **Utilisateur** : Utilisateur de l'équipement Hikvision (Un utilisateur spécifique à l'API ISAPI est nécessaire avec les droits suffisants). Voir ci-dessous. 
--	**Mot de passe** : Mot de passe de l'équipement Hikvision.
-
 > NB : L'utilisateur Admin n'est pas autorisé.
+-	**Mot de passe** : Mot de passe de l'équipement Hikvision.
+-	**Image** : Image alternative pour remplacer l'image par défaut d'un équipement. Peut être uploadée depuis le bouton **Télécharger Image** de la page principale du plugin. Il est conseillé de trouver une image PNG avec fond transparent pour que la liste reste cohérente avec le design Jeedom. La recherche d'image à fond transparent peut facilement être effectuée avec Google rubrique Image puis dans les paramètres avancés de la recherche, possibilité de spécifier les paramètres d'image (résolution, fond transparent,...)
+
+![ListeDevice](https://user-images.githubusercontent.com/60837526/157309869-6723c9bd-ada1-4e38-b927-b89088eb3a2a.JPG)
 
 Il n'est pas nécessaire d'activer pour le plugin dans le réseau avancé l'option **Hikvision-CGI athentification** ni **ONVIF** sauf si vous utilisez ces fonctionnalités par ailleurs. Elles sont en revanche **requise** (CGI) pour l'utilisation du périphérique dans le plugin caméra. L'option CGI semble activée par défaut sur les NVR.
 > NB : Lors de l'enregistrement de l'équipement. Si une connexion en cours est déjà effective sur l'équipement, la connexion est **tuée** puis **relancée**.
