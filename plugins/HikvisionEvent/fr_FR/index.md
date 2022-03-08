@@ -122,6 +122,13 @@ En parallèle sont aussi créées les commandes :
 - Dernière date d'alarme sur chaque channel (Sur les NVR, cela permet d'avoir une date par caméra)
 - Reboot du périphérique (Il est nécessaire d'avoir mis les bons droits dans la création du user. Voir config gestion des utilisateurs ci-dessous)
 
+Fonctionnement du flux d'Alarme 
+=======================
+La connexion au flux d'alarme du périphérique est lancé lors du démarrage du démon et lors de l'enregistrement d'un périphérique (postSave).
+A la connexion initiale, le périphérique est intérogé et retourne ses infos et ses fonctionnalités.
+En cas de perte de connexion sur le flux d'alarme, celui ci est relancé automatiquement toutes les 30 secondes.
+
+> NB : Si lors de l'intérrogation initiale (deamon_sart et postsave), le périphérique n'est pas joignable, alors la connextion au flux d'alarme est abandonnée et ne sera pas relancée.
 
 **Paramètrage des caméras ou NVR Hikvision**
 =====================================================
