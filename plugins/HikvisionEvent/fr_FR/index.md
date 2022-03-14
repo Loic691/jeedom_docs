@@ -9,14 +9,35 @@ Présentation
 =======================
 
 Ce plugin permet de récupérer les alarmes et d'exécuter des actions sur vos équipements Hikvision (et sous-marques).
-Les capacités (fonctionnalités) et infos systèmes (firmware, reference,...) de la caméra sont aussi récupérées et affichées (fonction à venir).
+Les fonctionnalités et infos systèmes (firmware, réference,...) du périphérique sont récupérées et affichées dans les pages équipements.
 Pour la beta, le plugin ne gère que la remontée d'alarme. Les commandes actions et infos systèmes arriveront dans les futures versions.
-Sont supportés à date :
+Sont supportés dans la version stable :
 - Toutes les **caméras** Hikvision et sous marques
 - Tous les **NVR** Hikvision et sous marques
+- Tous les évènements liés au système : accès illégal, Doublon d'IP, Problème réseau, Heartbeat, ouverture boitier...
+- Tous les évènements liés à la détection à proprement parlé suivant les modèles 
+  - Détection audio (augmentation/baisse de volume,...)
+  - Détection vidéo non intelligente :
+    - Détection de mouvement vidéo (VMD)
+    - Détection changement de scène
+  - Détection intelligente avec la classification des régions/zones détectées ainsi que la cible (humain ou voiture sur les caméras compatibles)
+    - Intrusion 
+    - Franchissement de lignes
+    - Entrée/Sortie dans une région
+    - Apparition/Disparition de baggages/objets
+    - Detection de visage
+    - Tous les autres types de détection **sans exception**
+- L'activation/désactivation de la détection d'alarme (prochaine beta)
+- Le reboot du device (déjà présent dans la beta)
+- La détection des URL des flux vidéo (à venir dans beta)
+- La gestion des commandes PTZ (futur beta sachant que ces commandes sont déjà présentes dans le plugin officiel caméra)
+- La reception automatique d'image d'alarme dans le flux d'alarme sans snapshot (avec la possibilité future de les envoyer dans un scénario) - Fonctionne sur Accusene EASY IP 4
+- La prise d'un snapshot si la fonction précédente n'est pas gérée par les caméras (lors d'une future beta)
 - Les **portiers Hikvision doorbell** ne sont pour l'instant pas supportés (des tests sont en cours)
 
 > Attention, Suite changement sur les clefs API dans  le core Jeedom >= 4.2.13, si vous n'avez pas de remontée d'alarmes dans les logs, il faut vérifier que la clé API du plugin est bien activé dans les paramètres de JEEDOM (Réglage/Système/Configuration/API)
+
+> Suite à de nombreux tests, à titre perso et pro, je vous conseille les caméras de la série EASY IP 4 ACCUSENCE (format bullet, mini-dôme ou turret dans différentes versions)
 
 > Attention ce plugin n'a pas vocation à gèrer la lecture des flux vidéos RTSP et MJPEG, le plugin officiel caméra de **JEEDOM** prenant en charge à 100% cette fonction  de lecture vidéo pour Hikvision. En revanche, il est prévu dans une prochaine version que l'ajout d'une caméra dans le plugin **HIKVISIONEVENT** ajoute automatiquement le device dans le plugin caméra officiel. Cette opération sera automatique.
 
