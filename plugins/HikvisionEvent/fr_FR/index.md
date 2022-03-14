@@ -15,6 +15,7 @@ Sont supportés dans la version stable :
 - Toutes les **caméras** Hikvision et sous marques
 - Tous les **NVR** Hikvision et sous marques
 - Tous les évènements liés au système : accès illégal, Doublon d'IP, Problème réseau, Heartbeat, ouverture boitier...
+- Personnalisation des images des périphériques dans jeedom
 - Tous les évènements liés à la détection à proprement parlé suivant les modèles 
   - Détection audio (augmentation/baisse de volume,...)
   - Détection vidéo non intelligente :
