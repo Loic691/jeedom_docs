@@ -12,8 +12,8 @@ Ce plugin permet de récupérer les alarmes et d'exécuter des actions sur vos �
 Les fonctionnalités et infos systèmes (firmware, réference,...) du périphérique sont récupérées et affichées dans les pages équipements.
 Pour la beta, le plugin ne gère que la remontée d'alarme. Les commandes actions et infos systèmes arriveront dans les futures versions.
 Sont supportés dans la version stable :
-- Toutes les **caméras** Hikvision et sous marques
-- Tous les **NVR** Hikvision et sous marques
+- Toutes les **caméras** Hikvision et marques rebrandées
+- Tous les **NVR** Hikvision et marques rebrandées
 - Tous les évènements liés au système : accès illégal, Doublon d'IP, Problème réseau, Heartbeat, ouverture boitier...
 - Personnalisation des images des périphériques dans jeedom pour remplace les images de base (IPDome, IPCamera ou NVR) par défaut automatiquement détectées
 - Tous les évènements liés à la détection à proprement parlé suivant les modèles 
