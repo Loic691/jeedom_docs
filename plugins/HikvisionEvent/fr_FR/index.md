@@ -27,13 +27,19 @@ Sont supportés dans la version stable :
     - Apparition/Disparition de baggages/objets
     - Detection de visage
     - Tous les autres types de détection **sans exception**
-- L'activation/désactivation de la détection d'alarme (prochaine beta)
+- L'activation/désactivation de la détection d'alarme par type d'alarme (prochaine beta)
 - Le reboot du device (déjà présent dans la beta)
 - La détection des URL des flux vidéo (à venir dans beta)
+- La date de la dernière alarme (+ par channel pour les NVR)
+- La gestion de la présence sur le réseau de la caméra via le heartbeat natif et non un simple ping
+  Avec possibiité dans les options du plugin de désactiver la notification d'un message Jeedom lors d'une perte réseau
 - La gestion des commandes PTZ (futur beta sachant que ces commandes sont déjà présentes dans le plugin officiel caméra)
 - La reception automatique d'image d'alarme dans le flux d'alarme sans snapshot (avec la possibilité future de les envoyer dans un scénario) - Fonctionne sur Accusene EASY IP 4
 - La prise d'un snapshot si la fonction précédente n'est pas gérée par les caméras (lors d'une future beta)
-- Les **portiers Hikvision doorbell** ne sont pour l'instant pas supportés (des tests sont en cours)
+- La détection automatique des périphériques HIKVISION. La librairie est déjà intégrée et les tests iniitiaux sont réalisés.
+- A venir en beta : l'affichage d'une page santé regroupant toutes les périphériques, leurs consommations CPU, mémoire,...
+
+> Les **portiers Hikvision doorbell** ne sont pour l'instant pas supportés (des tests sont en cours)
 
 > Attention, Suite changement sur les clefs API dans  le core Jeedom >= 4.2.13, si vous n'avez pas de remontée d'alarmes dans les logs, il faut vérifier que la clé API du plugin est bien activé dans les paramètres de JEEDOM (Réglage/Système/Configuration/API)
 
