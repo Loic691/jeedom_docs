@@ -179,6 +179,11 @@ Système - Gestion des utilisateurs
 -----------------------
 Créer un utilisateur dédié au plugin. La capture représente le minimum requis pour le plugin. Si vous souhaitez pouvoir visualiser la caméra dans le plugin caméra natif jeedom, il est nécessaire de rajouter les droits audio et vidéo en lecture.
 
+Si vous souhaitez pouvoir redemarrer l'équipement avec la commande action, les droits démarrer/arrêter son nécessaire
+
+![6df8070b5fa3a0fecfe25af38ce14c084489e467](https://user-images.githubusercontent.com/60837526/158280256-9d59451a-cdb4-44f9-9d66-3a3322b9530b.png)
+
+
 ![systemusers-ok](https://user-images.githubusercontent.com/60837526/153629554-f0580c4d-8169-4b90-b28d-21d46745b5bf.JPG)
 
 Network - Avancé
