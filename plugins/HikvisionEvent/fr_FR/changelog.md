@@ -8,6 +8,7 @@ Si rien n'est indiqué, il s'agit probablement d'une petite mise à jour pour la
 > Attention, Suite changement sur les clefs API dans  le core Jeedom >= 4.2.13, si vous n'avez pas de remontée d'alarmes dans les logs, il faut vérifier que la clé API du plugin est bien activé dans les paramètres de JEEDOM (Réglage/Système/Configuration/API)
 
 # En Beta
+- **17/03/2022**  Inversion de la commande de heartbeat pour rester dans la norme hik. 1 si alarme, 0 si OK
 - **15/03/2022**  Correction d'un probleme d'appel à l'API jeedom dans le cas ou jeedom intègre un certificat HTTPS et est configuré en HTTPS avec une IP LAN.
 - **14/03/2022**  Correction d'un plantage dans certains cas dans le démon suite à l'appel de l'API Jeedom. Modification de quelques logs
 - **08/03/2022**  Ajout d'une commande reboot du device + Amélioration lisibilité du code + correction de l'assignation de la pièce par défaut + Ajout fonctionnalité pour ignorer le message Jeedom de perte vidéo dans la configuration du plugin. Ajout la possibilité de changer l'image par défaut d'un équipement Hikvision. Intégration de la lib mDNS PHP en vue de la détection automatique des équipements hikvision.
