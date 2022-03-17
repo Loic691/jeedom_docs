@@ -148,7 +148,7 @@ Il est nécessaire d'activer chaque évènement désiré et d'activer pour chaqu
 ![event-ok](https://user-images.githubusercontent.com/60837526/153620262-998acf82-b909-43b9-a281-8d7889c0554c.jpg)
 
 En parallèle sont aussi créées les commandes :
-- Heartbeat (état) du périphérique (1 si connecté, sinon 0)
+- Heartbeat (état) du périphérique (0 si connecté, 1 si alarme)
 - Dernière communication avec le device
 - Dernière date d'alarme sur chaque channel (Sur les NVR, cela permet d'avoir une date par caméra)
 - Reboot du périphérique (Il est nécessaire d'avoir mis les bons droits dans la création du user. Voir config gestion des utilisateurs ci-dessous)
