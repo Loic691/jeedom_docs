@@ -122,7 +122,8 @@ Une fois la configuration enregistrée. Le plugin lance la connexion au device. 
 Commandes générées
 -----------------------
 Les commandes d'alarmes sont automatiquement créées au fil de leur arrivée. Elles sont de type Binaire.
-A moins de savoir précisément ce que vous souhaitez utiliser comme alarme et si vous souhaitez dans un premier temps toutes les obtenir, il est conseillé de toutes les activer sur votre équipement Hikvision. Cela créera les commandes, faites votre marché dans **Jeedom**, puis désactiver sur la caméra celles que vous ne souhaitez pas utiliser. Cela vous évitera d'avoir trop de déclenchements dans l'application (gratuite) **HIK-CONNECT**.
+Pour les voir apparaitre dans le plugin, il faut que les évènements en question se déclenchent au moins une fois.
+C'est pour cette raison, à moins de savoir précisément ce que vous souhaitez utiliser comme alarme et si vous souhaitez dans un premier temps toutes les obtenir, il est conseillé de toutes les activer sur votre équipement Hikvision. Cela créera les commandes dynamiquement dès que les alarmes sont déclenchées, faites votre marché dans **Jeedom**, puis désactiver sur la caméra celles que vous ne souhaitez pas utiliser. Cela vous évitera d'avoir trop de déclenchements dans l'application (gratuite) **HIK-CONNECT**.
 
 > NB : Les commandes d'alarmes sont créées avec un return state à 0 au bout de 1 minute par sécurité. La gestion de la répétition des valeurs est activée nativement par le plugin. Cela permet de redéclencher un scénario sur nouvelle alarme alors que la précédenrte n'est pas acquittée.
 
