@@ -131,7 +131,7 @@ Les commandes d'alarmes sont automatiquement créées au fil de leur arrivée. E
 Pour les voir apparaitre dans le plugin, il faut que les évènements en question se déclenchent au moins une fois.
 C'est pour cette raison, à moins de savoir précisément ce que vous souhaitez utiliser comme alarme et si vous souhaitez dans un premier temps toutes les obtenir, il est conseillé de toutes les activer sur votre équipement Hikvision. Cela créera les commandes dynamiquement dès que les alarmes sont déclenchées, faites votre marché dans **Jeedom**, puis désactiver sur la caméra celles que vous ne souhaitez pas utiliser. Cela vous évitera d'avoir trop de déclenchements dans l'application (gratuite) **HIK-CONNECT**.
 
-> NB : Les commandes d'alarmes sont créées avec un return state à 0 au bout de 1 minute par sécurité. La gestion de la répétition des valeurs est activée nativement par le plugin. Cela permet de redéclencher un scénario sur nouvelle alarme alors que la précédenrte n'est pas acquittée.
+> NB : Les commandes info d'alarmes sont créées avec un return state à 0 au bout de 1 minute par sécurité. La gestion de la répétition des valeurs est activée nativement par le plugin. Cela permet de redéclencher un scénario sur nouvelle alarme alors que la précédenrte n'est pas acquittée.
 
 Autant de commandes info sont créées que de 
 - **Canaux** : 1 pour les caméras, plusieurs pour les NVR
@@ -151,7 +151,9 @@ Voici un exemple de commandes créées automatiquement
 
 > NB : Les évènements intelligents sont plus robustes et plus fiables que les évènements simple. Par exemple la détection intrusion intelligente (fielddetection) par rapport à la détection de mouvement simple (VMD).
 
-Il est nécessaire d'activer chaque évènement désiré et d'activer pour chaque la fonction **Avertir le centre de surveillance** tel indiqué sur la capture ci-dessous.
+Il est nécessaire d'activer chaque évènement désiré et d'activer pour chaque la fonction **Avertir le centre de surveillance** tel indiqué sur la capture ci-dessous afini que les commandes soient crées à leur arrivée dans Jeedom.
+
+Les commandes actions Activer et Désactiver sont aussi ajoutées dynamiquement dès que l'alarme se présente. Il vous est maintenant possible d'activer ou désactivers la détection en fonction du type souhaité (fielddetection, linedetection, ...).
 
 ![event-ok](https://user-images.githubusercontent.com/60837526/153620262-998acf82-b909-43b9-a281-8d7889c0554c.jpg)
 
