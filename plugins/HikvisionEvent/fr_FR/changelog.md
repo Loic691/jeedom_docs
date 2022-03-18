@@ -8,6 +8,7 @@ Si rien n'est indiqué, il s'agit probablement d'une petite mise à jour pour la
 > Attention, Suite changement sur les clefs API dans  le core Jeedom >= 4.2.13, si vous n'avez pas de remontée d'alarmes dans les logs, il faut vérifier que la clé API du plugin est bien activé dans les paramètres de JEEDOM (Réglage/Système/Configuration/API)
 
 # En Beta
+- **18/03/2022**  Optimisation des timeout réseau, Ajout d'une fonction permettant d'ignorer les enregistrements des images d'alarmes reçues
 - **17/03/2022**  Inversion de la commande de heartbeat pour rester dans la norme hik. 1 si alarme, 0 si OK
 - **15/03/2022**  Correction d'un probleme d'appel à l'API jeedom dans le cas ou jeedom intègre un certificat HTTPS et est configuré en HTTPS avec une IP LAN.
 - **14/03/2022**  Correction d'un plantage dans certains cas dans le démon suite à l'appel de l'API Jeedom. Modification de quelques logs
