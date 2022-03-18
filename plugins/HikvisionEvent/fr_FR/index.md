@@ -65,6 +65,7 @@ Quelques options sont configurables :
 - **Durée de rétention des images** pour la durée ou le plugin conserve les images enregistrées dans le répertoire data du plugin (fonction à venir)
 - **Pièce par défaut** pour un équipement nouvellement créé 
 - **Ignorer le heartbeat** permet, si coché, de ne pas générer un message Jeedom en cas de perte de la connexion avec l'équipement (evenement videoloss hikvision)
+- **Ignorer les images d'alarme**, si coché, permet de ne pas enregistrer sur disques les images reçues à travers le gestionnaire d'alarme hikvision
 
 > Les caméras en version firmware > 5.5 envoi ce heartbeat toutes les 10 secondes. Si le firmware < 5.5, le rafraichissement est toutes les 300ms.
 
