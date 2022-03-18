@@ -37,6 +37,7 @@ Sont supportés dans la version stable :
 
 **A venir en beta :**
 
+- Création d'un lien avec le plugin caméra afin que l'équipement soit créé (si pas présent) dans le plugin caméra. Les images reçues du flux d'alarme ne seront plus enregistrés dans le répertoire data du plugin hikvisionevent mais dans le répertoire data du plugin caméra afin de profiter de la visualisation facile 
 - Envoi dans un scnéario de l'image reçue dans le flux d'alarme (hors snapshot) et donc possibilité d'envoyer sur telegram par exemple
 - La prise d'un snapshot si la fonction précédente n'est pas gérée dans le flux d'alarme des caméras
 - La détection des URL des flux vidéo
