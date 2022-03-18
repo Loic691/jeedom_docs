@@ -48,9 +48,9 @@ Sont supportés dans la version stable :
 
 > Les **portiers Hikvision doorbell** ne sont pour l'instant pas supportés (des tests sont en cours)
 
-> Attention, Suite changement sur les clefs API dans  le core Jeedom >= 4.2.13, si vous n'avez pas de remontée d'alarmes dans les logs, il faut vérifier que la clé API du plugin est bien activé dans les paramètres de JEEDOM (Réglage/Système/Configuration/API)
+> Attention, Suite changement sur les clefs API dans  le core Jeedom >= 4.2.13, si vous n'avez pas de remontée d'alarmes dans les logs, il faut vérifier que la clé API du plugin est bien activé dans les paramètres de JEEDOM (Réglage/Système/Configuration/API). Ce bug du core semble avoir été corrigé dans la 4.2.14.
 
-> Suite à de nombreux tests, à titre perso et pro, je vous conseille les caméras de la série EASY IP 4 ACCUSENCE (format bullet, mini-dôme ou turret dans différentes versions)
+> Suite à de nombreux tests, à titre perso et pro, je vous conseille les caméras de la série EASY IP 4 ACUSENSE (format bullet, mini-dôme ou turret dans différentes versions avec ou sans audio, avec ou sans LED Flash, avec ou sans la fonction ColourVU)
 
 > Attention ce plugin n'a pas vocation à gèrer la lecture des flux vidéos RTSP et MJPEG, le plugin officiel caméra de **JEEDOM** prenant en charge à 100% cette fonction  de lecture vidéo pour Hikvision. En revanche, il est prévu dans une prochaine version que l'ajout d'une caméra dans le plugin **HIKVISIONEVENT** ajoute automatiquement le device dans le plugin caméra officiel. Cette opération sera automatique.
 
