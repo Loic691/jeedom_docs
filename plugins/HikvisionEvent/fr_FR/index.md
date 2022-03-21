@@ -74,7 +74,7 @@ Quelques options sont configurables :
 - **Ignorer le heartbeat** permet, si coché, de ne pas générer un message Jeedom en cas de perte de la connexion avec l'équipement (evenement videoloss hikvision)
 - **Ignorer les images d'alarme**, si coché, permet de ne pas enregistrer sur disques les images reçues à travers le gestionnaire d'alarme hikvision
 
-> Les caméras en version firmware > 5.5 envoi ce heartbeat toutes les 10 secondes. Si le firmware < 5.5, le rafraichissement est toutes les 300ms.
+> Les caméras en version firmware > 5.5 envoi ce heartbeat toutes les 10 secondes. Si le firmware <= 5.5, le rafraichissement est toutes les 300ms. A date ces firmwares anciens (<=5.5) peuvent poser des soucis de plantage du démon tant le volume d'évènement est important. Pb pris en compte.
 
 Il sera possible dans une version ultérieure de détecter automatiquement les périphériques Hikvision sur votre réseau local. 
 Je réfléchis également à comment afficher les images de détection (pour les caméras qui prennent en charge cette fonction)
