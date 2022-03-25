@@ -8,6 +8,7 @@ Si rien n'est indiqué, il s'agit probablement d'une petite mise à jour pour la
 > Attention, Suite changement sur les clefs API dans  le core Jeedom >= 4.2.13, si vous n'avez pas de remontée d'alarmes dans les logs, il faut vérifier que la clé API du plugin est bien activé dans les paramètres de JEEDOM (Réglage/Système/Configuration/API)
 
 # En Beta
+- **26/03/2022**  Ajout de la fonction Santé permettant de visualier d'un coup tous les devivces et d'afficher leur status (Connexion, CPU, mémoire,...)
 - **21/03/2022**  Fix d'un problème sur les alarmes perte vidéo (videoloss) notament sur les NVR
 - **18/03/2022**  Ajout de la fonction permettant d'activer/désactiver les alarmes par type (motiondetection, linedetection, fielddetection,...)
 - **18/03/2022**  Optimisation des timeout réseau, Ajout d'une fonction permettant d'ignorer les enregistrements des images d'alarmes reçues
