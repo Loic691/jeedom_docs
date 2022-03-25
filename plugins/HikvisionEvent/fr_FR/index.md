@@ -34,6 +34,7 @@ Sont supportés dans la version stable :
 - La reception automatique d'image d'alarme dans le flux d'alarme sans snapshot - Fonctionne notament sur gamme AcuSense EASY IP 4
 - L'activation/désactivation de la détection d'alarme par type d'alarme (**déjà présent dans la beta**)
 - Le reboot du device (**déjà présent dans la beta**)
+- l'affichage d'une page santé regroupant toutes les périphériques, leurs consommations CPU, mémoire,... (**déjà présent dans la beta**)
 
 **A venir en beta :**
 
@@ -43,7 +44,6 @@ Sont supportés dans la version stable :
 - La détection des URL des flux vidéo
 - La gestion des commandes PTZ (sachant que ces commandes sont déjà présentes dans le plugin officiel caméra)
 - La détection automatique des périphériques HIKVISION. **La librairie est déjà intégrée et les tests iniitiaux sont réalisés**
-- l'affichage d'une page santé regroupant toutes les périphériques, leurs consommations CPU, mémoire,...
 
 > Attention depuis le beta du 17/03/2022, la gestion de la commande info de heartbeat est inversée (0 si OK, 1 si alarme)
 
@@ -90,12 +90,13 @@ Vous retrouvez ici :
 -   un bouton pour **ajouter** un équipement manuellement
 -   un bouton pour **afficher** les paramètres du plugin
 -   un bouton **Télécharger Image** qui vous permet d'uploader depuis votre PC l'image d'un équipement
--   un bouton **Santé** qui vous donne une vue d'ensemble de tous vos équipements à un moment donné (Fonction à venir)
+-   un bouton **Santé** qui vous donne une vue d'ensemble de tous vos équipements à un moment donné
 -   un bouton **Community** qui pointe sur le fil de discussion de ce plugin sur la community
 -   un bouton **Documentation** qui pointe sur cette présente documentation
 -   enfin en dessous vous retrouvez la liste de vos équipements Hikvision
 
-![ListeDevice](https://user-images.githubusercontent.com/60837526/157309869-6723c9bd-ada1-4e38-b927-b89088eb3a2a.JPG)
+![ListeDevice](https://user-images.githubusercontent.com/60837526/160214492-5438afb7-8ff3-472f-855b-212e29fc04b0.JPG)
+
 
 En cliquant sur un de vos équipements vous arrivez sur la page configuration de votre équipement comprenant 2 onglets, équipement et commandes.
 
