@@ -44,6 +44,7 @@ Sont supportés dans la version stable :
 - La détection des URL des flux vidéo
 - La gestion des commandes PTZ (sachant que ces commandes sont déjà présentes dans le plugin officiel caméra)
 - La détection automatique des périphériques HIKVISION. **La librairie est déjà intégrée et les tests iniitiaux sont réalisés**
+- Allumage lampe et déclenchement message sur les caméras équpées.
 
 > Attention depuis le beta du 17/03/2022, la gestion de la commande info de heartbeat est inversée (0 si OK, 1 si alarme)
 
