@@ -32,9 +32,9 @@ Sont supportés dans la version stable :
 - La gestion de la présence sur le réseau de la caméra via le heartbeat natif et non un simple ping
   Avec possibiité dans les options du plugin de désactiver la notification d'un message Jeedom lors d'une perte réseau
 - La reception automatique d'image d'alarme dans le flux d'alarme sans snapshot - Fonctionne notament sur gamme AcuSense EASY IP 4
-- L'activation/désactivation de la détection d'alarme par type d'alarme (**déjà présent dans la beta**)
-- Le reboot du device (**déjà présent dans la beta**)
-- l'affichage d'une page santé regroupant toutes les périphériques, leurs consommations CPU, mémoire,... (**déjà présent dans la beta**)
+- L'activation/désactivation de la détection d'alarme par type d'alarme (linedetection, fielddetection, motion detection,...)
+- Le reboot du device
+- l'affichage d'une page santé regroupant toutes les périphériques, leurs consommations CPU, mémoire,...
 
 **A venir en beta :**
 
@@ -130,7 +130,7 @@ Une fois la configuration enregistrée. Le plugin lance la connexion au device. 
 
 Commandes générées
 -----------------------
-Les commandes d'alarmes sont automatiquement créées au fil de leur arrivée. Elles sont de type Binaire.
+Les commandes d'alarmes sont automatiquement créées au fil de leur arrivée. Elles sont de type info Binaire.
 Pour les voir apparaitre dans le plugin, il faut que les évènements en question se déclenchent au moins une fois.
 C'est pour cette raison, à moins de savoir précisément ce que vous souhaitez utiliser comme alarme et si vous souhaitez dans un premier temps toutes les obtenir, il est conseillé de toutes les activer sur votre équipement Hikvision. Cela créera les commandes dynamiquement dès que les alarmes sont déclenchées, faites votre marché dans **Jeedom**, puis désactiver sur la caméra celles que vous ne souhaitez pas utiliser. Cela vous évitera d'avoir trop de déclenchements dans l'application (gratuite) **HIK-CONNECT**.
 
@@ -156,15 +156,15 @@ Voici un exemple de commandes créées automatiquement
 
 Il est nécessaire d'activer chaque évènement désiré et d'activer pour chaque la fonction **Avertir le centre de surveillance** tel indiqué sur la capture ci-dessous afini que les commandes soient crées à leur arrivée dans Jeedom.
 
-Les commandes actions Activer et Désactiver sont aussi ajoutées dynamiquement dès que l'alarme se présente. Il vous est maintenant possible d'activer ou désactivers la détection en fonction du type souhaité (fielddetection, linedetection, ...).
+Les **commandes action** Activer et Désactiver sont aussi ajoutées dynamiquement dès que l'alarme se présente. Il vous est maintenant possible d'activer ou désactiver  la détection en fonction du type souhaité (fielddetection, linedetection, ...). Pour cette fonction et pour éviter l'erreur 403 (privilège insuffisant), il est nécessaire d'activer les droits sur le device : **A distance : paramétrage**
 
 ![event-ok](https://user-images.githubusercontent.com/60837526/153620262-998acf82-b909-43b9-a281-8d7889c0554c.jpg)
 
 En parallèle sont aussi créées les commandes :
 - Heartbeat (état) du périphérique (0 si connecté, 1 si alarme)
 - Dernière communication avec le device
-- Dernière date d'alarme sur chaque channel (Sur les NVR, cela permet d'avoir une date par caméra)
-- Reboot du périphérique (Il est nécessaire d'avoir mis les bons droits dans la création du user. Voir config gestion des utilisateurs ci-dessous)
+- Dernière date d'alarme sur chaque channel (Sur les NVR, cela permet d'avoir une date par caméra) - Il s'agit du timestamp remonté par le device et non la date/heure de jeedom
+- Reboot du périphérique (Il est nécessaire d'avoir mis les bons droits dans la création du user. Voir config gestion des utilisateurs ci-dessous) cf **A distance : arrêter/redémarrer**
 
 Fonctionnement du flux d'Alarme 
 =======================
@@ -196,6 +196,7 @@ Si vous souhaitez pouvoir redemarrer l'équipement avec la commande action, les 
 
 ![6df8070b5fa3a0fecfe25af38ce14c084489e467](https://user-images.githubusercontent.com/60837526/158280256-9d59451a-cdb4-44f9-9d66-3a3322b9530b.png)
 
+Idem pour l'activation des alarmes, il est nécessaire d'avoir le droit **A distance : paramétrage**
 
 ![systemusers-ok](https://user-images.githubusercontent.com/60837526/153629554-f0580c4d-8169-4b90-b28d-21d46745b5bf.JPG)
 
