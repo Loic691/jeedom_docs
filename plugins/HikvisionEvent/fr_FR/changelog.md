@@ -7,6 +7,27 @@ description: Changelog du plugin Hikvision Event
 Si rien n'est indiqué, il s'agit probablement d'une petite mise à jour pour la compatibilité Jeedom V4
 > Attention, Suite changement sur les clefs API dans  le core Jeedom >= 4.2.13, si vous n'avez pas de remontée d'alarmes dans les logs, il faut vérifier que la clé API du plugin est bien activé dans les paramètres de JEEDOM (Réglage/Système/Configuration/API)
 
+# Stable prévue au 01/05/2022
+
+- Détection automatiques des périphériques HIKVISION avec le protocole mDNS utilisé par le SADP Tool de Hik
+- Mise en place de la rétention des fichiers JPG enregistrés dans le répertoire data du plugin ou gestion par le plugin camera
+- Commandes PTZ (à voir si utile)
+- Affichage du lien http pour se connecter à la caméra directement
+
+# 20220329-stable (29 mars 2022)
+
+- Merge de toutes les évolutions en beta depuis la dernière stable jusqu'à la beta du 20220329
+- Activation / Désactivation de la détection de mouvement par type d'alarme (fielddetection, linedetection, VMD,...)
+- Changement de l'image d'un périphérique avec fonction d'upload de l'image
+- Reboot de la caméra via le plugin (droit nécessessaire)
+- Intégration de la lib mDNS en vue de la détection automatique des device dans la prochaine stable
+
+# 20220301-stable (01 mars 2022)
+
+- Gestion du flux d'alarmes des Caméras et NVRs
+- Affichge des capacités d'alarmes de l'équipement
+- Affichage des infos systèmes
+
 # En Beta
 - **29/03/2022**  Changement du nom du fichier de log pour hikvisioneventd pour coller au standard jeedom, Fix d'un probleme sur les tags XML vide
 - **28/03/2022**  Ajout de la fonction Santé permettant de visualier d'un coup tous les devivces et d'afficher leur status (Connexion, CPU, mémoire,...)
@@ -34,25 +55,3 @@ Si rien n'est indiqué, il s'agit probablement d'une petite mise à jour pour la
 - **17/02/2022**  Passage en public de la version beta après période de test avec des membres de la community
 - **03/02/2022**  Réécriture d'une bibliotèque de gestion d'alarme avec l'API ISAPI
 - **05/01/2022**  Création de la version beta
-
-# 20220301-stable
-
-- Gestion du flux d'alarmes des Caméras et NVRs
-- Affichge des capacités d'alarmes de l'équipement
-- Affichage des infos systèmes
-
-# Stable prévue au 01/04/2022
-
-- Activation / Désactivation de la détection de mouvement par type d'alarme (fielddetection, linedetection, VMD,...)
-- Changement de l'image d'un périphérique avec fonction d'upload de l'image (OK en BETA)
-- Reboot de la caméra via le plugin (OK en BETA)
-- Mise en place de la rétention des fichiers JPG enregistrés dans le répertoire data du plugin
-- Commandes PTZ (à voir si utile)
-- Affichage du lien http pour se connecter à la caméra directement
-- Intégration de la lib mDNS en vue de la détection automatique des device (OK en BETA)
- 
-# Stable prévue au 01/05/2022
-
-- Détection automatiques des périphériques HIKVISION avec le protocole mDNS utilisé par le SADP Tool de Hik
-
-
