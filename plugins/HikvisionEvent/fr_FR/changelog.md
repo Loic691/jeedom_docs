@@ -7,7 +7,7 @@ description: Changelog du plugin Hikvision Event
 Si rien n'est indiqué, il s'agit probablement d'une petite mise à jour pour la compatibilité Jeedom V4
 > Attention, Suite changement sur les clefs API dans  le core Jeedom >= 4.2.13, si vous n'avez pas de remontée d'alarmes dans les logs, il faut vérifier que la clé API du plugin est bien activé dans les paramètres de JEEDOM (Réglage/Système/Configuration/API)
 
-# Stable prévue au 01/05/2022
+# Stable prévue au 01/07/2022
 
 - Détection automatiques des périphériques HIKVISION avec le protocole mDNS utilisé par le SADP Tool de Hik
 - Mise en place de la rétention des fichiers JPG enregistrés dans le répertoire data du plugin ou gestion par le plugin camera
@@ -29,6 +29,7 @@ Si rien n'est indiqué, il s'agit probablement d'une petite mise à jour pour la
 - Affichage des infos systèmes
 
 # En Beta
+- **01/06/2022**  Mise à jour des dépendances et bascule sur NodeJS 16 conformément au prérequis de l'équipe jeedom 
 - **29/03/2022**  Changement du nom du fichier de log pour hikvisioneventd pour coller au standard jeedom, Fix d'un probleme sur les tags XML vide
 - **28/03/2022**  Ajout de la fonction Santé permettant de visualier d'un coup tous les devivces et d'afficher leur status (Connexion, CPU, mémoire,...)
 - **21/03/2022**  Fix d'un problème sur les alarmes perte vidéo (videoloss) notament sur les NVR
